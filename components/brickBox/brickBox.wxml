@@ -2,21 +2,26 @@
 <view class='section-brick'>
   <!--头部  -->
   <view class='brick-header'>
-    <image class='brick-banner' src="{{ data.bannerSrc}}" wx:if="{{ data.isShowBanner }}"></image> 
+    <image class='brick-banner' src="{{ data.bannerSrc }}" wx:if="{{ data.isShowBanner }}"></image> 
     <slot></slot>
   </view>
 
 <!--列表  -->
   <view class='brick-list'>
-    <view class='brick-list-two'wx:key="listIndex" wx:for="{{ data.child }}" wx:for-item="listItem" wx:for-index="listIndex">
-
+    <!--两行列表  -->
+    <view class='brick-list-two' wx:key="listIndex" wx:for="{{ data.child }}" wx:for-item="listItem" wx:for-index="listIndex">
+      <!--列表项  -->
       <view class='brick-item' wx:key="index" wx:for="{{ listItem }}" wx:for-index="index" wx:for-item="item">
+        <!--商品图片盒子  -->
         <view class='item-image-wrapper'>
-          <image class='item-image' src='{{ item.imgSrc}}'></image>
+          <image class='item-image' src='{{ item.imgSrc }}'></image>
         </view>
+        <!--商品标题  -->
         <view class='item-title'>{{ item.title }}</view>
+        <!--商品描述  -->
         <view class='item-desc'>{{ item.desc }}</view>
-        <view class='item-price'>
+         <!--商品价格盒子  -->
+        <view class='item-price-wrapper'>
           <text class='price'>{{ item.price }}</text>
           <text class='price-del'>{{ item.price_del }}</text>
         </view>

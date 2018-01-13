@@ -16,7 +16,7 @@
     <block class="banner-outer" >
      <swiper-item class='banner-inner'>
       <image class='banner-images' src="../../images/index/banner/banner.jpg"></image>
-    </swiper-item>
+     </swiper-item>
     </block>
   </swiper>
   
@@ -60,5 +60,6 @@
     </view>
   </view>
 
-  <brick-box></brick-box>
+  <brick-box inner-object="{{ indexData.star }}"></brick-box>
+  <brick-box inner-object="{{ indexData.news }}"> </brick-box> 
 </view>

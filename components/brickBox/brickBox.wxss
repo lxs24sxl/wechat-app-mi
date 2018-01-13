@@ -72,13 +72,13 @@
   -o-text-overflow: ellipsis;
    text-overflow: ellipsis;
 }
-.item-price {
+.item-price-wrapper {
   margin: 8rpx 0 30rpx 20rpx;
   font-size: 30rpx;
   color: #ff6700;
   
 }
-.item-price .price-del {
+.item-price-wrapper .price-del {
   text-decoration: line-through;
   font-size: 24rpx;
   margin-left: 10rpx;
