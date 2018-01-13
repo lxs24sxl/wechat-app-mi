@@ -1,0 +1,28 @@
+<!--components/brickBox/brickBox.wxml-->
+<view class='section-brick'>
+  <!--头部  -->
+  <view class='brick-header'>
+    <image class='brick-banner' src="{{ data.bannerSrc}}" wx:if="{{ data.isShowBanner }}"></image> 
+    <slot></slot>
+  </view>
+
+<!--列表  -->
+  <view class='brick-list'>
+    <view class='brick-list-two'wx:key="listIndex" wx:for="{{ data.child }}" wx:for-item="listItem" wx:for-index="listIndex">
+
+      <view class='brick-item' wx:key="index" wx:for="{{ listItem }}" wx:for-index="index" wx:for-item="item">
+        <view class='item-image-wrapper'>
+          <image class='item-image' src='{{ item.imgSrc}}'></image>
+        </view>
+        <view class='item-title'>{{ item.title }}</view>
+        <view class='item-desc'>{{ item.desc }}</view>
+        <view class='item-price'>
+          <text class='price'>{{ item.price }}</text>
+          <text class='price-del'>{{ item.price_del }}</text>
+        </view>
+      </view>
+      
+    </view>
+  </view>
+
+</view>

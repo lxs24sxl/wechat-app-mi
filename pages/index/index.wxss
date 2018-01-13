@@ -1,0 +1,126 @@
+/**首页样式**/
+.container {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+.section {
+  width: 100%;
+}
+/*搜索框 */
+.searchBox {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80rpx;
+  background-color: #ff6700;
+  line-height: 100rpx;
+}
+
+.searchBox .search-outer {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 90%;
+  height: 50rpx;
+  border-radius: 50rpx;
+  background: white;
+  font-size: 26rpx;
+  color: #666;
+}
+.searchBox .search-inner {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -o-transform: translate( -50%, -50% );
+  transform: translate( -50%, -50% );
+}
+/*搜索图标  */
+.searchBox .search-inner .icon-search {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+/*轮播图区  */
+.section-banner {
+  height: 380rpx;
+  width: 100%;
+   background-color: #ececec; 
+}
+.banner-outer, .banner-inner {
+  width: 100%;
+  height: inherit;
+}
+.banner-images {
+  width: 100%;
+  height: inherit;
+  border: 0;
+}
+
+/*列表导航区域  */
+.section-cells {
+  height: 160rpx;
+  /* background-color: #eee; */
+}
+.cells-list {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cells-item {
+  flex: 1;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item-images {
+  margin: 16rpx 0 2rpx 0;
+  width: 80rpx;
+  height: 80rpx;
+}
+.item-text {
+  font-size: 26rpx;
+  color: #999999;
+}
+/*活动区域  */
+.section-main {
+  height: 280rpx;
+  width: 100%;
+  padding: 14rpx 0;
+  background-color: #ececec;
+}
+.main-list {
+  height: inherit;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-item {
+  flex: 1;
+  /* width: 49.33%; */
+  padding-left: 10rpx;
+}
+.main-item:first-child {
+  padding-left: 0;
+}
+.main-item .main-image {
+  width: 100%;
+  height: 280rpx;
+}

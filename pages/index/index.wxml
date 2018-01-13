@@ -1,0 +1,64 @@
+<!--index.wxml-->
+<view class="container">
+  <!--搜索框  -->
+  <view class="section searchBox">
+    <!--搜索框-白色背景区域  -->
+    <view class='search-outer'>
+      <!--搜索框-内容区域  -->
+      <view class='search-inner'>
+        <image class='icon-search' src="../../images/common/icon_search.png"></image>
+        <text class='text'>搜索商品</text>
+      </view>
+    </view>
+  </view>
+
+  <swiper class='section section-banner'>
+    <block class="banner-outer" >
+     <swiper-item class='banner-inner'>
+      <image class='banner-images' src="../../images/index/banner/banner.jpg"></image>
+    </swiper-item>
+    </block>
+  </swiper>
+  
+  <view class='section section-cells'>
+    <view class='cells-list'>
+      
+      <view class='cells-item'>
+        <image class='item-images item-phone' src="../../images/index/cells/phone.png"></image>
+        <text class='item-text'>电话</text>
+      </view>
+      <view class='cells-item'>
+        <image class='item-images item-tv' src="../../images/index/cells/tv.png"></image>
+        <text class='item-text'>电视</text>
+      </view>
+      <view class='cells-item'>
+        <image class='item-images item-computer' src="../../images/index/cells/computer.png"></image>
+        <text class='item-text'>电脑</text>
+      </view>
+      <view class='cells-item'>
+        <image class='item-images item-router' src="../../images/index/cells/router.png"></image>
+        <text class='item-text'>智能</text>
+      </view>
+      <view class='cells-item'>
+        <image class='item-images item-news' src="../../images/index/cells/news.png"></image>
+        <text class='item-text'>新品</text>
+      </view>
+
+    </view>
+  </view>
+
+  <view class='section section-main'>
+    <view class='main-list'>
+
+      <view class='main-item'>
+        <image class='main-image' src="../../images/index/cells/main1.png"></image>
+      </view>
+      <view class='main-item'>
+        <image class='main-image' src="../../images/index/cells/main2.png"></image>
+      </view>
+
+    </view>
+  </view>
+
+  <brick-box></brick-box>
+</view>

@@ -1,0 +1,86 @@
+/* components/brickBox/brickBox.wxss */
+.section-brick {
+  width: 100%;
+  padding: 14rpx 0;
+  border-top: 14rpx solid #ececec;
+}
+.brick-header {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.brick-banner {
+  width: 100%;
+  height: 460rpx;
+}
+.brick-list {
+  width: 100%;
+  flex-direction: row;
+  border-top: 10rpx solid white;
+}
+/* .brick-list::before, .brick-list::after {
+  display: table;
+  content: "";
+}
+.brick-list:after {
+  clear: both;
+} */
+.brick-list-two {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.brick-item {
+  -webkit-box-flex: 1;
+  -webkit-flex:1 1 auto;
+  flex: 1 1 auto;
+  width: 49.33%;
+  padding-left: 10rpx;
+}
+.brick-item:nth-child( 2n + 1 ) {
+  padding-left: 0;
+}
+.item-image-wrapper {
+  width: 100%;
+  height: 280rpx;
+}
+.item-image {
+  width: 100%;
+  height: inherit;
+}
+.item-title {
+  margin: 30rpx 0 0 20rpx; 
+  font-size: 30rpx;
+  max-width: 75%;
+  overflow: hidden;
+  white-space: nowrap;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+   text-overflow: ellipsis;
+}
+.item-desc {
+  margin: 6rpx 0 0 20rpx;
+  font-size: 22rpx;
+  color: #999;
+  max-width: 75%;
+  overflow: hidden;
+  white-space: nowrap;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+   text-overflow: ellipsis;
+}
+.item-price {
+  margin: 8rpx 0 30rpx 20rpx;
+  font-size: 30rpx;
+  color: #ff6700;
+  
+}
+.item-price .price-del {
+  text-decoration: line-through;
+  font-size: 24rpx;
+  margin-left: 10rpx;
+  color: rgba(0,0,0,.54);
+}
