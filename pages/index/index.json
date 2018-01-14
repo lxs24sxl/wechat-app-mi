@@ -1,5 +1,8 @@
 {
   "usingComponents": {
     "brick-box": "../../components/brickBox/brickBox"
-  }
+  },
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 30,
+  "backgroundColor": "#eee"
 }

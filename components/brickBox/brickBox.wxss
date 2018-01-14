@@ -1,8 +1,8 @@
 /* components/brickBox/brickBox.wxss */
 .section-brick {
   width: 100%;
-  padding: 14rpx 0;
-  border-top: 14rpx solid #ececec;
+   /* padding: 14rpx 0;  */
+   border-top: 14rpx solid #ececec; 
 }
 .brick-header {
   width: 100%;
@@ -14,6 +14,10 @@
 .brick-banner {
   width: 100%;
   height: 460rpx;
+}
+.brick-as-banner {
+  width: 100%;
+  height: 300rpx;
 }
 .brick-list {
   width: 100%;
@@ -39,6 +43,7 @@
   flex: 1 1 auto;
   width: 49.33%;
   padding-left: 10rpx;
+  background-color: #ffffff;
 }
 .brick-item:nth-child( 2n + 1 ) {
   padding-left: 0;
