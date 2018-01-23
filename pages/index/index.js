@@ -395,9 +395,12 @@ Page({
           ]
         ]
       },
-    }
+    },
+    isLazyLoad: true
   },
   onLoad: function () {
+    // console.log(this.queryMultipleNodes('star'));
+    console.log(wx.canIUse("lazy-load")); 
   },
   //下拉刷新
   onPullDownRefresh: function () {
@@ -409,5 +412,10 @@ Page({
       wx.hideNavigationBarLoading() //完成停止加载
       wx.stopPullDownRefresh() //停止下拉刷新
     }, 1500);
+  },
+  test1: function () {
+    wx.pageScrollTo({
+      scrollTop: 1000
+    });
   }
 })

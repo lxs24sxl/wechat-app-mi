@@ -1,2 +1,14 @@
 <!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+<view class='container'>
+    <scroll-view class='category-left' scroll-y> 
+      <view class='category-list'>
+        <view data-num="{{ index }}" class="category-item {{_num==index?'cur':''}}" wx:for="{{ categoryData }}" wx:for-item="item" wx:for-index="index" wx:key="index" bindtap="categoryClick">
+          <text class="category-title">{{ item.title }}</text>
+        </view>
+      </view >   
+      
+    </scroll-view> 
+    <scroll-view class="category-right" scroll-y scroll-top="0" scroll-into-view="{{toView}}" scroll-with-animation="200">
+     <cate-list-box id="{{ rightItem.name }}" wx:for="{{ categoryData }}" wx:for-item="rightItem" wx:for-index="rightIndex" wx:key="rightIndex" inner-data="{{ rightItem }}"></cate-list-box>
+   </scroll-view>
+</view>

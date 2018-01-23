@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <!-- <scroll-view scroll-y="true"> -->
+   <!-- <scroll-view scroll-y="true" style="height:auto;">  -->
      <!--搜索框  -->
   <view class="section searchBox">
     <!--搜索框-白色背景区域  -->
@@ -25,7 +25,7 @@
   <view class='section section-cells'>
     <view class='cells-list'>
       
-      <view class='cells-item'>
+      <view class='cells-item' bindtap='test1'>
         <image lazy-load='{{ true }}' class='item-images item-phone' src="http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/cells/phone.png"></image>
         <text class='item-text'>电话</text>
       </view>
@@ -62,14 +62,18 @@
     </view>
   </view>
 
-  <brick-box inner-object="{{ indexData.star }}"></brick-box>
+
+
+  <brick-box wx:for="{{ indexData }}" wx:key="*this" wx:for-item="item" wx:for-index="index" inner-object="{{ item }}"></brick-box>
+  <!-- <brick-box inner-object="{{ indexData.star }}"></brick-box>
   <brick-box inner-object="{{ indexData.news }}"> </brick-box>
   <brick-box inner-object="{{ indexData.router }}"> </brick-box>
   <brick-box inner-object="{{ indexData.phone }}"> </brick-box>   
   <brick-box inner-object="{{ indexData.tv }}"> </brick-box>
   <brick-box inner-object="{{ indexData.smart }}"> </brick-box>
   <brick-box inner-object="{{ indexData.computer }}"> </brick-box>
-  
-  <!-- </scroll-view> -->
- 
+   -->
+   <!-- </scroll-view>  -->
+ <image lazy-load='{{ isLazyLoad }}' src='http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/cells/main2.png'></image>
 </view>
+

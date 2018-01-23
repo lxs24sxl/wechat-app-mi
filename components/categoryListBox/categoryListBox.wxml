@@ -1,0 +1,39 @@
+<!--components/categoryIistBox/categoryListBox.wxml-->
+<view class='category-list'>
+  <view wx:for="{{ innerData.data }}" class='list-item' wx:key="index" wx:for-item="item" wx:for-index="index">
+    <view class='category-title'>
+      <text>{{ item.title }}</text>
+    </view>
+    <!--计算行数，根据行数返回 每行3列的数组  -->
+    <wxs module="pd">
+      var getMessage = function ( array ) {
+        var row = 0, height = 0,len = array.length;
+        
+        row = ( len <= 3 )? 1: ( len % 3 != 0)? Math.floor( len / 3) + 1: Math.floor( len / 3);
+        var tempArr = [];
+        var start = 0; 
+        var end = 3;
+        for ( var i = 0; i < row; i++ ) {
+        
+          tempArr[ i ] =  array.slice( start, end );
+          start = end;
+          end += 3;
+        }
+        return tempArr;
+      }
+      module.exports.getMessage = getMessage;
+    </wxs>
+    <view class='category-group'>
+      <view class='group-column-3' wx:for="{{ pd.getMessage( item.childData ) }}" wx:for-item="item" wx:key="id" wx:for-index="index" >
+
+        <view wx:for="{{ item }}" wx:for-item="childItem" wx:key="childId" wx:for-index="childIndex" class='group-item'>
+
+          <view class="item-img-wrap">
+            <image class='item-img' src='{{ childItem.imgSrc }}'></image>
+          </view>
+          <text class='item-name'>{{ childItem.title }}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

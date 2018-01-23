@@ -152,7 +152,8 @@ Component({
           }
         ]
       ]
-    }
+    },
+    isLazyLoad: true
   },
 
   /**

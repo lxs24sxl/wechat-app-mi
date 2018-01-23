@@ -2,8 +2,8 @@
 <view class='section-brick'>
   <!--头部  -->
   <view class='brick-header'>
-    <image lazy-load="{{true}}" class='brick-banner' src="{{ data.bannerSrc }}" wx:if="{{ data.isShowBanner }}"></image> 
-    <image lazy-load="{{true}}" class='brick-as-banner' wx:for="{{ data.asBannerSrc }}" wx:for-item="bannerItem" wx:for-index="bannerIndex" wx:key="bannerIndex" src='{{ bannerItem }}'></image>
+    <image lazy-load="{{isLazyLoad}}" class='brick-banner' src="{{ data.bannerSrc }}" wx:if="{{ data.isShowBanner }}"></image> 
+    <image lazy-load="{{isLazyLoad}}" class='brick-as-banner' wx:for="{{ data.asBannerSrc }}" wx:for-item="bannerItem" wx:for-index="bannerIndex" wx:key="bannerIndex" src='{{ bannerItem }}'></image>
     <!-- <slot></slot> -->
   </view>
 
@@ -15,7 +15,7 @@
       <view class='brick-item' wx:key="index" wx:for="{{ listItem }}" wx:for-index="index" wx:for-item="item">
         <!--商品图片盒子  -->
         <view class='item-image-wrapper'>
-          <image lazy-load="{{true}}" class='item-image' src='{{ item.imgSrc }}'></image>
+          <image lazy-load="{{isLazyLoad}}" class='item-image' src='{{ item.imgSrc }}'></image>
         </view>
         <!--商品标题  -->
         <view class='item-title'>{{ item.title }}</view>

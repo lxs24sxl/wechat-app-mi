@@ -1,4 +1,7 @@
 {
+  "usingComponents": {
+    "cate-list-box": "../../components/categoryListBox/categoryListBox"
+  },
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#ececec",
   "navigationBarTitleText": "小米商城Lite",
