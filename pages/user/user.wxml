@@ -1,2 +1,25 @@
 <!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class='container'>
+  <!--用户信息区  -->
+  <view class='userInfo-wrap'>
+    <view class='userInfo-img-wrap'>
+      <image class='userInfo-img'></image>
+    </view>
+    <view class='userInfo-message'>
+      <text class='userInfo-name'>L-晓舜</text>
+      <text class='userInfo-uid'>小米账号:918473906</text>
+    </view>
+
+    <view class='userInfo-qrcode-wrap'>
+      <image class='userInfo-qrcode'></image>
+    </view>
+  </view>
+  <!--我的相关功能  -->
+  <view class='user-wrap line-top'>
+      <cell-box wx:for="{{ cellData.user.childData }}" wx:key="index" wx:for-index="index" wx:for-item="item" inner-data="{{ item }}"></cell-box>
+  </view>
+  <!--我的设置功能  -->
+  <view class='setting-wrap line-top'>
+    <cell-box wx:for="{{ cellData.setting.childData }}" wx:for-index="index" wx:for-item="item" wx:key="index" inner-data="{{ item }}"></cell-box>
+  </view>
+</view>

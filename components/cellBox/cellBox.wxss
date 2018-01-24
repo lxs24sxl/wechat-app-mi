@@ -1,0 +1,38 @@
+/* components/cellBox/cellBox.wxss */
+.cell-box-outer {
+  height: 108rpx;
+  width: 90vw;
+  padding:0 5vw;
+  background-color: white;
+}
+.cell-box-inner {
+  height: inherit;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+  border-top: 1px solid #f2f2f2;
+}
+.cell-img-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 108rpx;
+  width: 108rpx;
+}
+.cell-img {
+  height: 70rpx;
+  width: 70rpx;
+}
+.cell-title {
+  font-size: 32rpx;
+}
+.cell-enter {
+  background-color: #fcfcfc;
+  color: #ff6700;
+}

@@ -1,0 +1,16 @@
+<!--components/cellListBox/cellListBox.wxml-->
+<view class='cellList-box'>
+<!--图片区域  -->
+  <view class='cellList-img-wrap'>
+    <image class='cellList-img' src="{{ innerData.imgSrc }}"></image>
+  </view>
+  <!--底部信息区域  -->
+  <view class='cellList-bottom'>
+    <!--类型  -->
+    <view class='cellList-type-wrap'>
+      <text class='cellList-type'>{{ innerData.typeTitle }}</text>
+    </view>
+    <!--信息  -->
+    <text class='cellList-title'>{{ innerData.title }}</text>
+  </view>
+</view>

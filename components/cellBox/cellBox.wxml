@@ -1,0 +1,11 @@
+<!--components/cellBox/cellBox.wxml-->
+<view class='cell-box-outer' hover-class="cell-enter">
+  <view class='cell-box-inner'>
+
+    <view class='cell-img-wrap'>
+      <image class='cell-img' src='{{ innerData.imgSrc }}'></image>
+    </view>
+    <text class='cell-title'>{{ innerData.title }}</text>
+    
+  </view>
+</view>

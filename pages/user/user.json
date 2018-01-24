@@ -1,4 +1,7 @@
 {
+  "usingComponents": {
+    "cell-box": "../../components/cellBox/cellBox"
+  },
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#ececec",
   "navigationBarTitleText": "小米商城Lite",

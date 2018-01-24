@@ -1,2 +1,20 @@
 <!--pages/discovery/discovery.wxml-->
-<text>pages/discovery/discovery.wxml</text>
+<view class='container'>
+<!--导航栏  -->
+  <view class='nav-boxes-outer'>
+  <!--每个导航  -->
+    <view wx:for="{{ navData }}" wx:key="index" wx:key-index="index" wx:key-item="item" class='nav-box-wrap'>
+      <view class='nav-box'>
+        <view class='nav-img-wrap'>
+          <image class='nav-img' src='{{ item.imgSrc }}'></image>
+        </view>
+        <text class='nav-title'>{{ item.title }}</text>
+      </view>
+    </view>
+  </view>
+  <!--信息页面  -->
+  <view class='cellList-boxes-outer'>
+    <cell-list-box wx:for="{{ discoveryData }}" wx:key="index" wx:for-item="item" wx:for-index="index" inner-data="{{ item }}"></cell-list-box>
+  </view>
+</view>
+

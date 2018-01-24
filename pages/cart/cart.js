@@ -62,5 +62,13 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  /**
+   * 返回首页
+   */
+  toIndex: function () {
+    wx.switchTab({
+      url: '/pages/index/index'
+    });
   }
 })

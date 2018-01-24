@@ -11,7 +11,8 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ff6700",
     "navigationBarTitleText": "小米商城Lite",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#ebebeb"
   },
   "tabBar": {
     "list": [

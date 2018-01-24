@@ -1,1 +1,85 @@
 /* pages/user/user.wxss */
+.container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  background-color: #ebebeb;
+  height: 100vh;
+}
+.line-top {
+  padding-top: 16rpx;
+  background-color: #ebebeb
+}
+/*用户信息  */
+.userInfo-wrap {
+  height: 160rpx;
+  width: 90vw;
+  padding:0 5vw;
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+}
+.userInfo-img-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160rpx;
+  height: 160rpx;
+  background-color: red;
+}
+.userInfo-img {
+  width: 140rpx;
+  height: 140rpx;
+  background-color: green;
+}
+.userInfo-message {
+  width: 60vw;
+  margin-left: 40rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+}
+.userInfo-name {
+  margin-top: 34rpx;
+  font-size: 36rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+   -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  flex: 1; 
+}
+.userInfo-uid {
+  font-size: 24rpx;
+  color: #8d8d8d;
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+   -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  flex: 1; 
+}
+.userInfo-qrcode-wrap {
+  height: inherit;
+  width: 40rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+}
+.userInfo-qrcode {
+  height: 40rpx;
+  width: 40rpx;
+  background-color: black;
+}

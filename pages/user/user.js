@@ -5,7 +5,43 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    cellData: {
+      user: {
+        name: "user",
+        title: "用户",
+        childData: [
+          {
+            name: "order",
+            title: "我的订单",
+            imgSrc: "../../images/mine/icon_order.png"
+          },
+          {
+            name: "coupon",
+            title: "我的优惠券",
+            imgSrc: "../../images/mine/icon_coupon.png"
+          },
+          {
+            name: "fcode",
+            title: "我的f码",
+            imgSrc: "../../images/mine/icon_fcode.png"
+          }
+        ]
+      },
+      setting: {
+        name: "setting",
+        title: "设置",
+        childData: [
+          {
+            name: "setting",
+            title: "我的订单",
+            imgSrc: "../../images/mine/icon_setting.png"
+          }
+        ]
+      }
+    }
+      
+      
+    
   },
 
   /**

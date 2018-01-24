@@ -32,6 +32,8 @@ App({
         }
       }
     })
+
+    console.log(this.globalData.userInfo);
   },
   globalData: {
     userInfo: null

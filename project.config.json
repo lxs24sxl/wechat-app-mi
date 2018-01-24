@@ -28,9 +28,10 @@
 			"current": 0,
 			"list": [
 				{
-					"id": -1,
-					"name": "分类页面",
-					"pathName": "pages/category/category"
+					"id": 0,
+					"name": "发现页面",
+					"pathName": "pages/discovery/discovery",
+					"query": ""
 				}
 			]
 		}
