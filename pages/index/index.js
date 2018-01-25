@@ -1,80 +1,86 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+var indexGlobalData = {},             // 首页中可视界面数据
+    refreshGlobalData = []            // 需要动态加载的变量
 Page({
   data: {
     indexData: {
-      star: {
-        name: 'star',
-        title: '明星单品',
-        bannerSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/star/star_banner1.png',
-        asBannerSrc: [],
-        isShowBanner: true,
-        child: [
-          [
-            {
-              index: 1,
-              title: '小米5X 变焦双摄',
-              desc: '5.5"大屏轻薄全金属',
-              price: '1299元起',
-              price_del: '',
-              commodityType: '',
-              imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/star/mi_5x.png'
-            },
-            {
-              index: 2,
-              title: '红米5',
-              desc: '千元全面屏,前置柔光自拍',
-              price: '799元起',
-              price_del: '',
-              commodityType: '',
-              imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/star/hm_5.png'
-            }
-          ],
-          [
-            {
-              index: 3,
-              title: '小米移动电源高配版',
-              desc: '轻薄设计,轻松出行',
-              price: '149元',
-              price_del: '',
-              commodityType: '',
-              imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/star/mi_powerpro.png'
-            },
-            {
-              index: 4,
-              title: '小米电视4A 65"',
-              desc: '4K超清大屏,64位处理器',
-              price: '4999元',
-              price_del: '',
-              commodityType: '',
-              imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/star/mi_tv_4a65.png'
-            }
-          ],
-          [
-            {
-              index: 5,
-              title: '小米电视4A 49英寸"',
-              desc: '全高清,HDR,64位处理器',
-              price: '2399元',
-              price_del: '',
-              commodityType: '',
-              imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/star/mi_tv_4a49.png'
-            },
-            {
-              index: 6,
-              title: '小米空气净化器 2"',
-              desc: '10分钟,房间空气焕然一新',
-              price: '599元',
-              price_del: '699元',
-              commodityType: 'discount',
-              imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/star/mi_air2.png'
-            }
+      id: 1000001,
+      data: [
+        {
+          name: 'star',
+          title: '明星单品',
+          bannerSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/star/star_banner1.png',
+          asBannerSrc: [],
+          isShowBanner: true,
+          child: [
+            [
+              {
+                index: 1,
+                title: '小米5X 变焦双摄',
+                desc: '5.5"大屏轻薄全金属',
+                price: '1299元起',
+                price_del: '',
+                commodityType: '',
+                imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/star/mi_5x.png'
+              },
+              {
+                index: 2,
+                title: '红米5',
+                desc: '千元全面屏,前置柔光自拍',
+                price: '799元起',
+                price_del: '',
+                commodityType: '',
+                imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/star/hm_5.png'
+              }
+            ],
+            [
+              {
+                index: 3,
+                title: '小米移动电源高配版',
+                desc: '轻薄设计,轻松出行',
+                price: '149元',
+                price_del: '',
+                commodityType: '',
+                imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/star/mi_powerpro.png'
+              },
+              {
+                index: 4,
+                title: '小米电视4A 65"',
+                desc: '4K超清大屏,64位处理器',
+                price: '4999元',
+                price_del: '',
+                commodityType: '',
+                imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/star/mi_tv_4a65.png'
+              }
+            ],
+            [
+              {
+                index: 5,
+                title: '小米电视4A 49英寸"',
+                desc: '全高清,HDR,64位处理器',
+                price: '2399元',
+                price_del: '',
+                commodityType: '',
+                imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/star/mi_tv_4a49.png'
+              },
+              {
+                index: 6,
+                title: '小米空气净化器 2"',
+                desc: '10分钟,房间空气焕然一新',
+                price: '599元',
+                price_del: '699元',
+                commodityType: 'discount',
+                imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/star/mi_air2.png'
+              }
+            ]
           ]
-        ]
-      },
-      news: {
+        }
+      ]
+    },
+    refreshData: [
+      {
         name: 'news',
         title: '新品上线',
         bannerSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/news/news_banner1.png',
@@ -143,7 +149,7 @@ Page({
           ]
         ]
       },
-      router: {
+      {
         name: 'router',
         title: '米家智能',
         bannerSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/router/router_banner1.png',
@@ -151,7 +157,7 @@ Page({
         isShowBanner: true,
         child: []
       },
-      phone: {
+      {
         name: 'phone',
         title: '手机',
         bannerSrc: '',
@@ -182,7 +188,7 @@ Page({
           ],
         ]
       },
-      tv: {
+      {
         name: 'tv',
         title: '电视',
         bannerSrc: '',
@@ -233,7 +239,7 @@ Page({
           ]
         ]
       },
-      smart: {
+      {
         name: 'smart',
         title: '智能',
         bannerSrc: '',
@@ -344,7 +350,7 @@ Page({
           ]
         ]
       },
-      computer: {
+      {
         name: 'computer',
         title: '电脑',
         bannerSrc: '',
@@ -394,13 +400,53 @@ Page({
             }
           ]
         ]
+      }
+    ],
+    indexNavData: [
+      {
+        title: "手机",
+        imgSrc: "http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/cells/phone.png"
       },
-    },
+      {
+        title: "电视",
+        imgSrc: "http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/cells/tv.png"
+      },
+      {
+        title: "电脑",
+        imgSrc: "http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/cells/computer.png"
+      },
+      {
+        title: "智能",
+        imgSrc: "http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/cells/router.png"
+      },
+      {
+        title: "新品",
+        imgSrc: "http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/cells/news.png"
+      }
+    ],
     isLazyLoad: true
   },
   onLoad: function () {
-    // console.log(this.queryMultipleNodes('star'));
-    console.log(wx.canIUse("lazy-load")); 
+  },
+  onReachBottom: function () {
+    // 删除并返回数组的第一个
+    var temp = refreshGlobalData.shift();
+    // 存放截取的数据
+    indexGlobalData.data.push( temp );
+    // 替换数据
+    this.setData({
+      indexData: indexGlobalData
+    });
+  },
+  /**
+  * 生命周期函数--监听页面初次渲染完成
+  */
+  onReady: function () {
+    var data = this.data;
+    // 存储初始的数据
+    indexGlobalData = data.indexData;
+    // 存储需要刷新的数据 
+    refreshGlobalData = data.refreshData;
   },
   //下拉刷新
   onPullDownRefresh: function () {
@@ -413,9 +459,10 @@ Page({
       wx.stopPullDownRefresh() //停止下拉刷新
     }, 1500);
   },
-  test1: function () {
-    wx.pageScrollTo({
-      scrollTop: 1000
-    });
+  // 跳转到搜索商品页面
+  moveToSearch: function () {
+    wx.navigateTo({
+      url: '/pages/subPages/search/search',
+    })
   }
 })

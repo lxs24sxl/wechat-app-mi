@@ -16,5 +16,9 @@
   <view class='cellList-boxes-outer'>
     <cell-list-box wx:for="{{ discoveryData }}" wx:key="index" wx:for-item="item" wx:for-index="index" inner-data="{{ item }}"></cell-list-box>
   </view>
+  <!--底部往期回顾  -->
+  <view class='discovery-bottom'>
+    <text class='bottom-text'>查看往期精彩发现</text>
+  </view>
 </view>
 

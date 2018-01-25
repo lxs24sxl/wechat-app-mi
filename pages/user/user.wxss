@@ -71,7 +71,7 @@
 }
 .userInfo-qrcode-wrap {
   height: inherit;
-  width: 40rpx;
+  width: 64rpx;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -79,7 +79,7 @@
   align-self: flex-end;
 }
 .userInfo-qrcode {
-  height: 40rpx;
-  width: 40rpx;
+  height: 64rpx;
+  width: 64rpx;
   background-color: black;
 }

@@ -29,7 +29,7 @@
         <view wx:for="{{ item }}" wx:for-item="childItem" wx:key="childId" wx:for-index="childIndex" class='group-item'>
 
           <view class="item-img-wrap">
-            <image class='item-img' src='{{ childItem.imgSrc }}'></image>
+            <image lazy-load='{{ true }}' class='item-img' src='{{ childItem.imgSrc }}'></image>
           </view>
           <text class='item-name'>{{ childItem.title }}</text>
         </view>

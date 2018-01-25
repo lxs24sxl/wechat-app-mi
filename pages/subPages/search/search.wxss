@@ -1,0 +1,127 @@
+/* pages/subPages/search/search.wxss */
+.container {
+  height: 100vh;
+  background-color: #ebebeb;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.search-top-outer {
+  height: 84rpx;
+  width: 100vw;
+  background-color: #ff6700;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center
+}
+.search-top-left {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  margin-left: 12rpx;
+  height: 58rpx;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 6rpx;
+}
+.icon-search {
+  margin:0 10rpx;
+}
+.search-input {
+  font-size: 30rpx;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1
+}
+.icon-clear-wrap {
+  height: inherit;
+  width: 58rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-clear {
+  height: 50rpx;
+  width: 50rpx;
+}
+/*顶部右边  */
+.search-top-right {
+  height: 58rpx;
+  width: 110rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-title {
+  font-size: 30rpx;
+  color: #fff;
+
+}
+/*热门搜索区域  */
+.popular-search-box {
+  margin: 32rpx 10rpx;
+}
+.popular-search-box::before, .popular-search-box::after {
+  content: "";
+  display: table;
+}
+.popular-search-box::after {
+  clear: both;
+}
+.pop-search-wrap {
+  float: left;
+  height: 46rpx;
+  width: auto;
+  background-color: #fff;
+  margin-left: 14rpx;
+  margin-bottom: 14rpx; 
+  border: 1px solid #dadada;
+}
+.pop-search-title {
+  padding: 10rpx 16rpx 16rpx;
+  font-size: 24rpx;
+}
+/*搜索历史  */
+.xs-left {
+  padding: 0 24rpx;
+}
+.box-hd {
+  width: 100%;
+  height: 60rpx;
+}
+.box-hd-title {
+  line-height: 60rpx;
+  font-size: 26rpx;
+  color: #8c8c8c;
+}
+.box-bd {
+  background-color: #fff;
+}
+.box-bd-item {
+  height: 100rpx;
+  border-bottom: 1px solid #f2f2f2;
+}
+.box-bd-title {
+  line-height: 100rpx;
+  height: inherit;
+  font-size: 28rpx;
+  color: #1d1d1d;
+}
+.box-bd-title.clear-history {
+  color: #465c89;
+}
+.box-bd-item.clear-history-wrap {
+  text-align: center;
+}

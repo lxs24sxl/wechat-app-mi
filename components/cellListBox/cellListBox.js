@@ -24,7 +24,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    isVisible: ""
   },
 
   /**
@@ -32,5 +32,10 @@ Component({
    */
   methods: {
 
+  },
+  ready: function () {
+    this.setData({
+      isVisible: "is-visible"
+    });
   }
 })

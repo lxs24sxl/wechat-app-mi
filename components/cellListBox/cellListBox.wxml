@@ -1,5 +1,5 @@
 <!--components/cellListBox/cellListBox.wxml-->
-<view class='cellList-box'>
+<view class='cellList-box {{ isVisible }}'>
 <!--图片区域  -->
   <view class='cellList-img-wrap'>
     <image class='cellList-img' src="{{ innerData.imgSrc }}"></image>

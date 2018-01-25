@@ -14,10 +14,12 @@
 .brick-banner {
   width: 100%;
   height: 460rpx;
+  background-color: gainsboro;
 }
 .brick-as-banner {
   width: 100%;
   height: 300rpx;
+  background-color: seashell;
 }
 .brick-list {
   width: 100%;
@@ -51,6 +53,7 @@
 .item-image-wrapper {
   width: 100%;
   height: 280rpx;
+  background-color: papayawhip;
 }
 .item-image {
   width: 100%;

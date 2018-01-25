@@ -90,14 +90,17 @@ Page({
         typeTitle: "活动",
         imgSrc: "http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/discovery/11-11.png"
       }
-    ]
+    ],
+    isVisible: ""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.setData({
+      isVisible: "is-visible"
+    });
   },
 
   /**

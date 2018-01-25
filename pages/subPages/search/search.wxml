@@ -1,0 +1,41 @@
+<!--pages/subPages/search/search.wxml-->
+<view class='container'>
+  <!--顶部搜索栏  -->
+  <view class='search-top-outer'>
+    <!--搜索栏白色区  -->
+    <view class='search-top-left'>
+      <icon class='icon-search' type='search' size="18"></icon>
+      <input id='searchInput' class='search-input' bindinput="_beingInput" placeholder='搜索商品' confirm-type="search" value='{{ inputValue }}' bindconfirm="_sendSearchReq"></input>
+      <view class="icon-clear-wrap" bindtap='_clearContent' wx:if="{{ isShowClear }}">
+        <image class='icon-clear' src='../../../images/common/clear.png'></image>
+      </view>
+    </view>
+    <!--搜索栏文字区  -->
+    <view class='search-top-right'>
+      <text class='search-title' bindtap='_sendSearchReq'>搜索</text>
+    </view>
+    
+  </view>
+  <!--热门搜索  -->
+  <view class='popular-search-box'>
+    <view wx:for="{{ popularData }}" wx:key="{{ item.title }}" wx:for-index="index" wx:for-item="item" data-title="{{ item.title }}" class='pop-search-wrap'>
+      <text class='pop-search-title'>{{ item.title }}</text>
+    </view>
+  </view>
+  <!--搜索历史  -->
+  <view class='search-history-box' wx:if="{{ historyData.isVisible}}">
+    <view class='box-hd xs-left'>
+      <text class='box-hd-title'>{{ historyData.title }}</text>
+    </view>
+    <view class='box-bd xs-left'>
+      <view class='box-bd-list'>
+        <view wx:for="{{ historyData.data }}" wx:key="{{ item.title }}" wx:for-index="index" wx:for-item="item" class='box-bd-item'>
+          <text class='box-bd-title'>{{ item.title }}</text>
+        </view>
+        <view class='box-bd-item clear-history-wrap' bindtap='_clearHistory'>
+          <text class='clear-history box-bd-title'>清除搜索历史</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

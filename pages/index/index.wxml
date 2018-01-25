@@ -1,70 +1,64 @@
 <!--index.wxml-->
 <view class="container">
-   <!-- <scroll-view scroll-y="true" style="height:auto;">  -->
-     <!--搜索框  -->
-  <view class="section searchBox">
-    <!--搜索框-白色背景区域  -->
-    <view class='search-outer'>
-      <!--搜索框-内容区域  -->
-      <view class='search-inner'>
-        <image lazy-load='{{ true }}' class='icon-search' src="http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/common/icon_search.png"></image>
-        <text class='text'>搜索商品</text>
-      </view>
-    </view>
-  </view>
-  <!--轮播图  -->
-  <swiper class='section section-banner'>
-    <block class="banner-outer" >
-     <swiper-item class='banner-inner'>
-      <image class='banner-images' src="http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/banner/banner.jpg"></image>
-     </swiper-item>
-    </block>
-  </swiper>
   
-  <!--  -->
-  <view class='section section-cells'>
-    <view class='cells-list'>
+   <!--从后台读取数据，未获得数据呈现的界面  -->
+   <view class='loading-wrap' wx:if="{{ app.globalData.isLoading }}">
+    <view class='loading-inner'>
+      <button class='loading-title' loading="true">加载中</button>
+    </view>
+  </view>
+
+  <!--从后台读取数据，获得数据呈现的界面   -->
+  <view wx:else>
+    <!--搜索框  -->
+    <view class="section searchBox">
+      <!--搜索框-白色背景区域  -->
+      <view class='search-outer' bindtap='moveToSearch' hover-class='bind-search-area'>
+        <!--搜索框-内容区域  -->
+        <view class='search-inner'>
+           <image lazy-load='{{ true }}' class='icon-search' src="http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/common/icon_search.png"></image> 
+          <text class='text'>搜索商品</text>
+        </view>
+      </view>
+    </view>
+    <!--轮播图  -->
+    <swiper class='section section-banner'>
+      <block class="banner-outer" >
+        <swiper-item class='banner-inner'>
+          <image class='banner-images' src="http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/banner/banner.jpg"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  
+    <!-- 首页导航列表 -->
+    <view class='section section-cells'>
+      <view class='cells-list'>
       
-      <view class='cells-item' bindtap='test1'>
-        <image lazy-load='{{ true }}' class='item-images item-phone' src="http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/cells/phone.png"></image>
-        <text class='item-text'>电话</text>
-      </view>
-      <view class='cells-item'>
-        <image lazy-load='{{ true }}' class='item-images item-tv' src="http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/cells/tv.png"></image>
-        <text class='item-text'>电视</text>
-      </view>
-      <view class='cells-item'>
-        <image lazy-load='{{ true }}' class='item-images item-computer' src="http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/cells/computer.png"></image>
-        <text class='item-text'>电脑</text>
-      </view>
-      <view class='cells-item'>
-        <image lazy-load='{{ true }}' class='item-images item-router' src="http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/cells/router.png"></image>
-        <text class='item-text'>智能</text>
-      </view>
-      <view class='cells-item'>
-        <image lazy-load='{{ true }}' class='item-images item-news' src="http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/cells/news.png"></image>
-        <text class='item-text'>新品</text>
-      </view>
+        <view wx:for="{{ indexNavData }}" wx:key="indevNav" class='cells-item' bindtap='test1'>
+          <image lazy-load='{{ true }}' class='item-images item-phone' src="{{ item.imgSrc}}"></image>
+          <text class='item-text'>{{ item.title}}</text>
+        </view>
 
+      </view>
     </view>
-  </view>
 
-  <view class='section section-main'>
-    <view class='main-list'>
+    <!--首页活动列表  -->
+    <view class='section section-main'>
+      <view class='main-list'>
 
-      <view class='main-item'>
-        <image lazy-load='{{ true }}' class='main-image' src="http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/cells/main1.png"></image>
+        <view class='main-item'>
+          <image lazy-load='{{ true }}' class='main-image' src="http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/cells/main1.png"></image>
+        </view>
+        <view class='main-item'>
+          <image lazy-load='{{ true }}' class='main-image' src="http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/cells/main2.png"></image>
+        </view>
+
       </view>
-      <view class='main-item'>
-        <image lazy-load='{{ true }}' class='main-image' src="http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/cells/main2.png"></image>
-      </view>
-
     </view>
-  </view>
 
 
-
-  <brick-box wx:for="{{ indexData }}" wx:key="*this" wx:for-item="item" wx:for-index="index" inner-object="{{ item }}"></brick-box>
+    <!--首页主要信息  -->
+    <brick-box wx:for="{{ indexData.data }}" wx:key="{{ item.name }}" wx:for-item="item" wx:for-index="index" inner-object="{{ item }}"></brick-box>
   <!-- <brick-box inner-object="{{ indexData.star }}"></brick-box>
   <brick-box inner-object="{{ indexData.news }}"> </brick-box>
   <brick-box inner-object="{{ indexData.router }}"> </brick-box>
@@ -74,6 +68,8 @@
   <brick-box inner-object="{{ indexData.computer }}"> </brick-box>
    -->
    <!-- </scroll-view>  -->
- <image lazy-load='{{ isLazyLoad }}' src='http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/cells/main2.png'></image>
+   </view>
+     
+  
 </view>
 

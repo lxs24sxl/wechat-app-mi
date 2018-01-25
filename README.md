@@ -10,31 +10,43 @@
 
 ![分类页面](https://github.com/lxs24sxl/readme_add_pic/raw/master/images/wxproject_mi/category.png)
 
+![发现页面](https://github.com/lxs24sxl/readme_add_pic/raw/master/images/wxproject_mi/discovery.png)
+
+![购物车页面](https://github.com/lxs24sxl/readme_add_pic/raw/master/images/wxproject_mi/cart.png)
+
+![搜索页面](https://github.com/lxs24sxl/readme_add_pic/raw/master/images/wxproject_mi/search.png)
+
+
 #### 需完成部分
 
 > 首页
-> > 首页布局 <font color="red">get</font>
+> > 首页布局 <font color=red>get</font> 2018-01-15
 >
-> > 首页懒加载 
+> > 首页懒加载 <font color=red>get</font> 2018-01-25
+>
+> > > 搜索商品页面 <font color=red>get</font> 2018-01-25
+>
+> > > > 搜索商品页面缓存数据处理 <font color=red>get</font> 2018-01-25
 >
 > 分类
-> > 分类页面布局 <font color="red">get</font>
+> > 分类页面布局 <font color=red>get</font> 2018-01-23
 > 
 > > 分类页面滚动监听
 >
 > 发现
-> > 发现页面布局 get
+> > 发现页面布局 <font color=red>get</font> 2018-01-24
 >
 > > 发现页面懒加载 
 > 
 > 购物车
-> > 购物车页面布局 get
+> > 购物车页面布局 <font color=red>get</font> 2018-01-24
 >
 > > 增删改商品逻辑
 > 
 > 我的
-> > 我的页面布局 get
+> > 我的页面布局 <font color=red>get</font> 2018-01-24
 > 
 > > 获取个人信息
 >
-> > 子页面( 之后在细化 ) 
+> 商品详细页
+> 

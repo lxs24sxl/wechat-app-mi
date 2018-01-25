@@ -995,7 +995,23 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    const that = this;
+    // 获取本地数据，判断是否已经缓存
+    wx.getStorage({
+      key: '_category_data',
+      success: function (res) {
+        // todo：发送请求获取数据,获得数据，判断数据的相同性进行缓存
+        console.log("_app_log: 已经获得缓存数据");
+        that.setData({
+          categoryData: res.data
+        });
+      },
+      fail: function (res) {
+        // 获取缓存失败，添加数据到本地缓存中
+        wx.setStorageSync("_category_data", that.data.categoryData);
+        console.log("_app_log: 未获得缓存数据");
+      }
+    })
   },
 
   /**

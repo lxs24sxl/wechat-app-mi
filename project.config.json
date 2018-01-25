@@ -25,13 +25,14 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": -1,
 			"list": [
 				{
 					"id": 0,
-					"name": "发现页面",
-					"pathName": "pages/discovery/discovery",
-					"query": ""
+					"name": "搜索页面",
+					"pathName": "pages/subPages/search/search",
+					"query": "",
+					"scene": "1005"
 				}
 			]
 		}

@@ -26,16 +26,20 @@
   line-height: 100rpx;
 }
 
-.searchBox .search-outer {
+.search-outer {
   position: relative;
   left: 0;
   top: 0;
   width: 90%;
   height: 50rpx;
   border-radius: 50rpx;
-  background: white;
+  background-color: white;
   font-size: 26rpx;
   color: #666;
+}
+/*鼠标点击态  */
+.bind-search-area {
+  background-color: #ececec;
 }
 .searchBox .search-inner {
   display: -webkit-box;
@@ -65,6 +69,7 @@
 .banner-outer, .banner-inner {
   width: 100%;
   height: inherit;
+  background-color: papayawhip;
 }
 .banner-images {
   width: 100%;
@@ -133,4 +138,34 @@
 .main-item .main-image {
   width: 100%;
   height: 280rpx;
+}
+/*记载中  */
+.loading-wrap {
+  height: 100vh;
+  width: 100vw;
+  background-color: #ececec;
+}
+.loading-inner {
+  margin-top: 10rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60rpx;
+  width: 100vw;
+}
+.loading-img {
+  width: 60rpx;
+  height: 60rpx;
+  background-color: white;
+  border-radius: 50rpx;
+}
+.loading-title {
+  background-color: #ececec;
+  font-size: 28rpx;
+  color: #666;
+}
+.loading-title::after {
+  border: none;
 }
