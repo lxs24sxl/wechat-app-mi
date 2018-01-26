@@ -1,12 +1,11 @@
 /* pages/subPages/search/search.wxss */
+Page {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 .container {
-  height: 100vh;
   background-color: #ebebeb;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column;
 }
 .search-top-outer {
   height: 84rpx;
@@ -15,12 +14,12 @@
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  align-items: center
+  align-items: center;
 }
 .search-top-left {
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
   margin-left: 12rpx;
   height: 58rpx;
   background-color: #fff;
@@ -38,8 +37,8 @@
 .search-input {
   font-size: 30rpx;
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  flex: 1
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 .icon-clear-wrap {
   height: inherit;
@@ -71,6 +70,7 @@
 }
 /*热门搜索区域  */
 .popular-search-box {
+  width: 100vw;
   margin: 32rpx 10rpx;
 }
 .popular-search-box::before, .popular-search-box::after {
@@ -96,6 +96,9 @@
 /*搜索历史  */
 .xs-left {
   padding: 0 24rpx;
+}
+.popular-search-box {
+  width: 100vw;
 }
 .box-hd {
   width: 100%;

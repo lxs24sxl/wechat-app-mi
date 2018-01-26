@@ -140,16 +140,17 @@ Page({
     try {
       // 获取输入的数据
       var value = this.data.inputValue;
-      // 插入到临时数组的第一行
-      tempArr.data.unshift( {"title": value } );
-      tempArr.isVisible = true;
-      // 替换数据
-      this.setData({
-        historyData: tempArr
-      })
-      // 存放缓存数据
-      wx.setStorageSync('_history_search', tempArr.data )
-
+      if ( value ) {
+        // 插入到临时数组的第一行
+        tempArr.data.unshift({ "title": value });
+        tempArr.isVisible = true;
+        // 替换数据
+        this.setData({
+          historyData: tempArr
+        })
+        // 存放缓存数据
+        wx.setStorageSync('_history_search', tempArr.data)
+      }
     } catch (e) {
     }
   },
@@ -168,5 +169,12 @@ Page({
     } catch (e) {
       // Do something when catch error
     }
+  },
+  _sendPopData: function ( e ) {
+    let value = e.currentTarget.dataset.title;
+    this.setData({
+      inputValue: value
+    });
+    this._sendSearchReq();
   }
 })

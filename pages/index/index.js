@@ -428,15 +428,21 @@ Page({
   },
   onLoad: function () {
   },
+  /**
+   * 上拉加载
+   */
   onReachBottom: function () {
     // 删除并返回数组的第一个
     var temp = refreshGlobalData.shift();
-    // 存放截取的数据
-    indexGlobalData.data.push( temp );
-    // 替换数据
-    this.setData({
-      indexData: indexGlobalData
-    });
+    if ( temp ) {
+      // 存放截取的数据
+      indexGlobalData.data.push(temp);
+      // 替换数据
+      this.setData({
+        indexData: indexGlobalData
+      });
+    }
+    
   },
   /**
   * 生命周期函数--监听页面初次渲染完成
@@ -463,6 +469,12 @@ Page({
   moveToSearch: function () {
     wx.navigateTo({
       url: '/pages/subPages/search/search',
+    })
+  },
+  test1: function ( e ) {
+    console.log( e );
+    wx.previewImage({
+      urls: [e.currentTarget.dataset.img ],
     })
   }
 })

@@ -1,6 +1,7 @@
 /* pages/cart/cart.wxss */
 .container {
   background-color: #ebebeb;
+   display: flex; 
 }
 .no-product-box {
   height: 100vh;

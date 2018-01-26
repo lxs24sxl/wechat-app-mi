@@ -1,4 +1,7 @@
 /* pages/category/category.wxss */
+.container {
+  display: flex;
+}
 .category-left {
   height: 100vh;
   width: 20vw;

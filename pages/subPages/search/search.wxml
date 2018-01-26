@@ -18,7 +18,7 @@
   </view>
   <!--热门搜索  -->
   <view class='popular-search-box'>
-    <view wx:for="{{ popularData }}" wx:key="{{ item.title }}" wx:for-index="index" wx:for-item="item" data-title="{{ item.title }}" class='pop-search-wrap'>
+    <view wx:for="{{ popularData }}" wx:key="{{ item.title }}" wx:for-index="index" wx:for-item="item" data-title="{{ item.title }}" class='pop-search-wrap' bindtap='_sendPopData'>
       <text class='pop-search-title'>{{ item.title }}</text>
     </view>
   </view>
