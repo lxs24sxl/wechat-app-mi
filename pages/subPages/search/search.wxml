@@ -38,4 +38,28 @@
       </view>
     </view>
   </view>
+  <!--关键字搜索展示区  -->
+  <view class='search-key-list' wx:if="{{ isShowSearchKey }}">
+    <view class='result-list'>
+      <view class='result-item' wx:for="{{ searchKeyData.data }}" wx:key="{{ item.value }}" wx:for-item="item" wx:for-index="index">
+
+        <text class='result-title'>{{ item.title }}</text>
+      </view>
+    </view>
+  </view>
+  <!--搜索结果显示区  -->
+  <view class='search-return-list' wx:if="{{ isShowRetData }}">
+    <view class='return-list'>
+      <view class='return-item' wx:for="{{ searchRetData }}" wx:key="{{ item.name }}" wx:for-index="index" wx:for-item="item">
+        <view class='item-img-wrap'>
+          <image class='item-img' src='{{ item.imgSrc }}'></image>
+        </view>
+        <view class='item-content-box'>
+          <text class='item-name'>{{ item.name }}</text>
+          <text class='item-brief'>{{ item.brief }}</text>
+          <text class='item-price'>{{ item.price }}</text>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>

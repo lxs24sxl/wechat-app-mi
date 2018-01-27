@@ -16,6 +16,10 @@
 
 ![搜索页面](https://github.com/lxs24sxl/readme_add_pic/raw/master/images/wxproject_mi/search.png)
 
+![搜索页面-关键字搜索](https://github.com/lxs24sxl/readme_add_pic/raw/master/images/wxproject_mi/search_key.png)
+
+![搜索页面-搜索返回结果](https://github.com/lxs24sxl/readme_add_pic/raw/master/images/wxproject_mi/search_ret.png)
+
 
 #### 需完成部分
 
@@ -27,6 +31,8 @@
 > > > 搜索商品页面 <font color=red>get</font> 2018-01-25
 >
 > > > > 搜索商品页面缓存数据处理 <font color=red>get</font> 2018-01-25
+>
+> > > > 搜索商品页面逻辑处理 <font color=red>get</font> 2018-01-27
 >
 > 分类
 > > 分类页面布局 <font color=red>get</font> 2018-01-23

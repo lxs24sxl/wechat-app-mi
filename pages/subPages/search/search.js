@@ -7,9 +7,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    isShowClear: false,
-    inputValue: "",
-    popularData: [
+    isShowClear: false,                 // 是否显示清空图标
+    inputValue: "",                     // 输入框值
+    popularData: [                      // 热门搜索数据
       {
         title: "红米5 新品"
       },
@@ -26,14 +26,131 @@ Page({
         title: "小米笔记本Pro"
       }
     ],
-    historyData: {
+    historyData: {                      // 历史记录
       title: "搜索历史",
       isVisible: false,
       data: [
         
       ]
     },
-    storageHistory: []
+    storageHistory: [],                 // 临时储存历史记录的数组
+    searchKeyData: {                    // 关键字搜索数据
+      data: [        
+      ]
+    },
+    hongKeyData: {                      // 关键字为"红"的数据
+      value: "红",
+      data: [
+        {
+          title: "小米5X 红色版"
+        },
+        {
+          title: "红米5 16GB"
+        },
+        {
+          title: "红米5 Plus"
+        },
+        {
+          title: "红米5A"
+        },
+        {
+          title: "红米Note 5A 移动4G+"
+        },
+        {
+          title: "红米Note 5A 16GB"
+        },
+        {
+          title: "红米Note 5A"
+        },
+        {
+          title: "红米Note 4X"
+        },
+        {
+          title: "红米Note 4X 64GB"
+        },
+        {
+          title: "红米Note 4X"
+        }
+      ]
+    },
+    hmKeyData: {                        // 关键字为"红米"的数据
+      value: "红米",
+      data: [
+        {
+          title: "红米5 16GB"
+        },
+        {
+          title: "红米5 Plus"
+        },
+        {
+          title: "红米5A"
+        },
+        {
+          title: "红米Note 5A 移动4G+"
+        },
+        {
+          title: "红米Note 5A 16GB"
+        },
+        {
+          title: "红米Note 5A"
+        },
+        {
+          title: "红米Note 4X"
+        },
+        {
+          title: "红米Note 4X 64GB"
+        },
+        {
+          title: "红米4X 64GB"
+        }
+      ]
+    },
+    isShowSearchKey: false,             // 是否显示关键字搜索结果展示区
+    searchRetData: [                    // 搜索返回结果
+      {
+        imgSrc: "../../../images/searchResult/hm5.jpg",
+        name: "红米5 3GB+32GB",
+        brief: "「小米年货节！赠小米活塞耳机，加送米粉卡，可享小米分期6期免息」千元全面屏 / 超长续航 / 前置柔光自拍 / 骁龙处理器",
+        price: 899
+      },
+      {
+        imgSrc: "../../../images/searchResult/hm5.jpg",
+        name: "红米5 3GB+32GB",
+        brief: "「小米年货节！赠小米活塞耳机，加送米粉卡，可享小米分期6期免息」",
+        price: 899
+      },
+      {
+        imgSrc: "../../../images/searchResult/hm5.jpg",
+        name: "红米5 3GB+32GB",
+        brief: "「小米年货节！赠小米活塞耳机，加送米粉卡，可享小米分期6期免息」",
+        price: 899
+      },
+      {
+        imgSrc: "../../../images/searchResult/hm5.jpg",
+        name: "红米5 3GB+32GB",
+        brief: "「小米年货节！赠小米活塞耳机，加送米粉卡，可享小米分期6期免息」",
+        price: 899
+      },
+      {
+        imgSrc: "../../../images/searchResult/hm5.jpg",
+        name: "红米5 3GB+32GB",
+        brief: "「小米年货节！赠小米活塞耳机，加送米粉卡，可享小米分期6期免息」",
+        price: 899
+      },
+      {
+        imgSrc: "../../../images/searchResult/hm5.jpg",
+        name: "红米5 3GB+32GB",
+        brief: "「小米年货节！赠小米活塞耳机，加送米粉卡，可享小米分期6期免息」",
+        price: 899
+      },
+      {
+        imgSrc: "../../../images/searchResult/hm5.jpg",
+        name: "红米5 3GB+32GB",
+        brief: "「小米年货节！赠小米活塞耳机，加送米粉卡，可享小米分期6期免息」",
+        price: 899
+      }
+    ],
+    isShowRetData: false                // 是否显示返回数据结果展示区
   },
 
   /**
@@ -115,31 +232,66 @@ Page({
   },
   // 输入绑定事件
   _beingInput: function ( e ) {
-    var value = e.detail.value;
+    let value = e.detail.value;
+    let data = this.data;
     // 当值不为空时，显示清空图标，否则不显示清空图标
-    if (value != "" ) {
-      this.setData({
-        isShowClear: true,
-        inputValue: value
-      });
-    } else {
-      this.setData({
-        isShowClear: false,
-        inputValue: value
-      });
-    }
+      switch ( value ) {
+        case "红":                           // 关键字为"红"
+            this.setData({
+              searchKeyData: data.hongKeyData,
+              isShowSearchKey: true,
+              isShowClear: true,
+              inputValue: value,
+              isShowRetData: false
+            });
+            break;
+        case "红米":                           // 关键字为"红米"
+            this.setData({
+              searchKeyData: data.hmKeyData,
+              isShowSearchKey: true,
+              isShowClear: true,
+              inputValue: value,
+              isShowRetData: false
+            })
+            break;
+        case "":                              // 数据为空时
+          this.setData({
+            isShowClear: false,
+            inputValue: value,
+            searchKeyData: {
+              data: []
+            },
+            isShowSearchKey: false,
+            isShowRetData: false
+          });
+          break;
+        default:                              // 默认情况下
+            this.setData({
+              searchKeyData: {
+                data: []
+              },
+              isShowSearchKey: false,
+              isShowClear: true,
+              inputValue: value,
+              isShowRetData: false
+            })
+            break;
+      }
   },
   // 清除输入框内容
   _clearContent: function () {
     this.setData({
-      inputValue: ""
+      inputValue: "",
+      isShowSearchKey: false,
+      isShowRetData: false
     });
   },
   // 发送搜索请求，并存储缓存
   _sendSearchReq: function () {
     try {
       // 获取输入的数据
-      var value = this.data.inputValue;
+      let value = this.data.inputValue;
+      let that = this;
       if ( value ) {
         // 插入到临时数组的第一行
         tempArr.data.unshift({ "title": value });
@@ -149,7 +301,21 @@ Page({
           historyData: tempArr
         })
         // 存放缓存数据
-        wx.setStorageSync('_history_search', tempArr.data)
+        wx.setStorageSync('_history_search', tempArr.data);
+        // 当发送的记录为"红米"时
+        if ( value == "红米" ) {
+          wx.showLoading({
+            title: '正在获取数据',
+            mask: true
+          })
+          setTimeout(function () {
+            wx.hideLoading();
+            that.setData({
+              isShowRetData: true,
+              isShowSearchKey: false
+            });
+          }, 1500);
+        }
       }
     } catch (e) {
     }
