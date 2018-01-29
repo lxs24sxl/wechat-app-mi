@@ -25,12 +25,12 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 0,
 			"list": [
 				{
 					"id": 0,
 					"name": "搜索页面",
-					"pathName": "pages/subPages/search/search",
+					"pathName": "pages/category/category",
 					"query": "",
 					"scene": "1005"
 				}

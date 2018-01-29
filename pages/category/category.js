@@ -1,11 +1,13 @@
 // pages/category/category.js
+// 定义定时器
+var scrollTimer = null;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    categoryData: [
+    categoryData: [                                   // 分类数据
       {
         name: "new",
         title: "新品",
@@ -973,9 +975,10 @@ Page({
           }
         ]
       },
-    ],
-    _num: 0,
-    toView: "new"
+    ],            
+    _num: 0,                          // 初始化当前菜单位置
+    toView: "new",                    // 初始化当前的锚点位置
+    __res_height: []                  // 各组件的top属性
   },
   categoryClick: function ( e ) {
     var num = e.currentTarget.dataset.num,
@@ -990,6 +993,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 局部变量: 创建一个selectorQuery对象实例
+    var query = wx.createSelectorQuery().in(this);
+    // 临时数组:存放各组件top属性
+    var tempArr = [];
+    var that = this;
+    // 获取高度
+    query.selectAll('.cate-list').boundingClientRect(function (res) {
+    }).exec(function (res) {
+      let resArr = res[0];
+      // 遍历元素，存放top属性到临时数组
+      for (var i = 0, len = resArr.length; i < len; i++ ){
+        tempArr.push(resArr[i].top );
+      }
+      // 将临时数组赋值给__res_height变量
+      that.setData({
+        __res_height: tempArr
+      });
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -1054,5 +1075,44 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  // 滚动触顶事件
+  _toupperEvent: function () {
+    this.setData({
+      _num: 0
+    });
+    clearTimeout(scrollTimer);
+  },
+  // 滚动触底事件
+  _tolowerEvent: function () {
+    let len = this.data.categoryData.length;
+    this.setData({
+      _num: len - 1
+    });
+    clearTimeout(scrollTimer);
+  },
+  _scrollEvent: function ( e ) {
+    var that = this;
+    // 如果存在定时器则清除
+    if ( scrollTimer ) {
+      clearTimeout( scrollTimer );
+    }
+    // 定义定时器，滚动停止时，识别位置
+    scrollTimer = setTimeout( function () {
+      console.log("scrolling end...");
+      // 局部变量: 自定义组件高度数组
+      var heightArr = that.data.__res_height;
+      // 局部变量: 当前滚动条距离顶部的位置
+      var scrollTop = e.detail.scrollTop;
+      // 遍历数组
+      for (var i = 0, len = heightArr.length; i < len; i++ ) {
+        // 判断当前位置
+        if (scrollTop > heightArr[ i ] && scrollTop < heightArr[i+1] ) {
+          that.setData({
+            _num: i
+          });
+        }
+      }
+    }, 200);
   }
 })

@@ -37,7 +37,7 @@
 > 分类
 > > 分类页面布局 <font color=red>get</font> 2018-01-23
 > 
-> > 分类页面滚动监听
+> > 分类页面滚动监听 <font color=red>get</font> 2018-01-29
 >
 > 发现
 > > 发现页面布局 <font color=red>get</font> 2018-01-24

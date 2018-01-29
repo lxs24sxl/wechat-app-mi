@@ -28,3 +28,7 @@
   font-size: 34rpx;
   color: #ff6700;
 }
+
+.cate-list {
+  height:100%;
+}

@@ -339,7 +339,8 @@ Page({
   _sendPopData: function ( e ) {
     let value = e.currentTarget.dataset.title;
     this.setData({
-      inputValue: value
+      inputValue: value,
+      isShowClear: true
     });
     this._sendSearchReq();
   }
