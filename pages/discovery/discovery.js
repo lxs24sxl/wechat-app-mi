@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    navData: [
+    navData: [                              // 顶部导航数据
       {
         title: "新品预约",
         imgSrc: "http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/discovery/news.png"
@@ -23,7 +23,7 @@ Page({
         imgSrc: "http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/discovery/group.png"
       }
     ],
-    discoveryData: [
+    discoveryData: [                        // 当前呈现内容数据区
       {
         id: 3010101,
         title: "50元红包等你划分",
@@ -54,6 +54,9 @@ Page({
         typeTitle: "新品",
         imgSrc: "http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/discovery/hm_5_plus.png"
       },
+      
+    ],
+    loadingData: [                          // 需要呈现的内容数据区
       {
         id: 3010106,
         title: "买手环2,送橙色腕带，限量哦！",
@@ -91,15 +94,28 @@ Page({
         imgSrc: "http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/discovery/11-11.png"
       }
     ],
-    isVisible: ""
+    contentHeight: 0,                       // 内容区的高度
+    isInsertData: true                      // 是否可以插入数据
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      isVisible: "is-visible"
+    var query = wx.createSelectorQuery();
+    var that = this;
+    query.selectAll('.section').boundingClientRect(function (rect) {
+
+    }).exec(function ( res ) {
+      var data = res[0];
+      var temp = 0;
+      for ( var i = 0, len = data.length; i < len; i++ ) {
+        console.log(data[i].height);
+        temp += data[i].height;
+      }
+      that.setData({
+        contentHeight: temp
+      });
     });
   },
 
@@ -150,5 +166,32 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  /**
+   * page滚动事件
+   * :懒加载数据
+   */
+  onPageScroll: function ( e ) {
+    // 获取滚动条距离顶部的位置
+    var scrollTop = e.scrollTop;
+    // 局部变量
+    var data = this.data;
+    // 当滚动条的距离顶部的位置大于等于数据内容区的2分之一且允许插入数据时，插入数据
+    if (data.isInsertData && e.scrollTop >= (data.contentHeight / 2)) {
+      // 临时数组
+      var temp = new Array();
+      // 获取当前数据
+      var discoveryData = data.discoveryData;
+      // 获取懒加载的数据
+      var loadingData = data.loadingData;
+      // 连接当前数据数组，将值赋予临时数组
+      temp = discoveryData.concat( loadingData );
+      // 设置属性
+      this.setData({
+        isInsertData: false,
+        discoveryData: temp
+      });
+    }
+    
   }
 })

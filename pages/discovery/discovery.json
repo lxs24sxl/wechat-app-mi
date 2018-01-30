@@ -5,5 +5,7 @@
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#ececec",
   "navigationBarTitleText": "小米商城Lite",
-  "navigationBarTextStyle": "black"
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 30
 }

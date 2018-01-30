@@ -1,7 +1,7 @@
 <!--pages/discovery/discovery.wxml-->
 <view class='container'>
 <!--导航栏  -->
-  <view class='nav-boxes-outer'>
+  <view class='nav-boxes-outer section'>
   <!--每个导航  -->
     <view wx:for="{{ navData }}" wx:key="index" wx:key-index="index" wx:key-item="item" class='nav-box-wrap'>
       <view class='nav-box'>
@@ -13,7 +13,7 @@
     </view>
   </view>
   <!--信息页面  -->
-  <view class='cellList-boxes-outer'>
+  <view class='cellList-boxes-outer section'>
     <cell-list-box wx:for="{{ discoveryData }}" wx:key="index" wx:for-item="item" wx:for-index="index" inner-data="{{ item }}"></cell-list-box>
   </view>
   <!--底部往期回顾  -->

@@ -29,8 +29,8 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "搜索页面",
-					"pathName": "pages/category/category",
+					"name": "发现页面",
+					"pathName": "pages/discovery/discovery",
 					"query": "",
 					"scene": "1005"
 				}
