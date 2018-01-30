@@ -10,7 +10,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "1.7.2",
 	"appid": "wx4085cbd9e1b17bf8",
-	"projectname": "mi",
+	"projectname": "wechat-app-mi",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -25,7 +25,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": -1,
 			"list": [
 				{
 					"id": 0,

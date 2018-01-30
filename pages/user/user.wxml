@@ -3,15 +3,15 @@
   <!--用户信息区  -->
   <view class='userInfo-wrap'>
     <view class='userInfo-img-wrap'>
-      <image class='userInfo-img'></image>
+      <image src='{{userInfo.avatarUrl}}' class='userInfo-img'></image>
     </view>
     <view class='userInfo-message'>
-      <text class='userInfo-name'>L-晓舜</text>
+      <text class='userInfo-name'>{{ userInfo.nickName }}</text>
       <text class='userInfo-uid'>小米账号:918473906</text>
     </view>
 
     <view class='userInfo-qrcode-wrap'>
-      <image class='userInfo-qrcode'></image>
+      <image src="../../images/common/qrcode.png" class='userInfo-qrcode'></image>
     </view>
   </view>
   <!--我的相关功能  -->

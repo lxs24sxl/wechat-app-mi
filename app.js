@@ -1,15 +1,22 @@
 //app.js
 App({
   onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    var that = this;
+    // // 展示本地存储能力
+    // var logs = wx.getStorageSync('logs') || []
+    // logs.unshift(Date.now())
+    // wx.setStorageSync('logs', logs)
 
     // 登录
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        wx.getUserInfo({
+          success: function (res) {
+            var simpleUser = res.userInfo;
+            that.globalData.userInfo = simpleUser;
+          }
+        });
       }
     })
     // 获取用户信息
@@ -32,7 +39,7 @@ App({
         }
       }
     })
-    var that = this;
+    
     // 请求数据,获得返回数据存放在全局变量中
     // wx.request({
     //   url: 'test.action', //仅为示例，并非真实的接口地址

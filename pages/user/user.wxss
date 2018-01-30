@@ -9,7 +9,7 @@
 }
 .line-top {
   padding-top: 16rpx;
-  background-color: #ebebeb
+  background-color: #ebebeb;
 }
 /*用户信息  */
 .userInfo-wrap {
@@ -30,12 +30,11 @@
   align-items: center;
   width: 160rpx;
   height: 160rpx;
-  background-color: red;
 }
 .userInfo-img {
   width: 140rpx;
   height: 140rpx;
-  background-color: green;
+  background-color: gainsboro;
 }
 .userInfo-message {
   width: 60vw;
@@ -81,5 +80,4 @@
 .userInfo-qrcode {
   height: 64rpx;
   width: 64rpx;
-  background-color: black;
 }

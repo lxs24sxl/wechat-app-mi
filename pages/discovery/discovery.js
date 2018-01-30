@@ -102,17 +102,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 创建selectorQuery对象
     var query = wx.createSelectorQuery();
+    // 局部变量
     var that = this;
+    // 获得节点高度
     query.selectAll('.section').boundingClientRect(function (rect) {
 
     }).exec(function ( res ) {
+      // 局部变量，获取节点信息数组
       var data = res[0];
+      // 临时数字变量，储存整体高度
       var temp = 0;
+      // 遍历节点信息数组，添加高度数据
       for ( var i = 0, len = data.length; i < len; i++ ) {
-        console.log(data[i].height);
         temp += data[i].height;
       }
+      // 设置属性
       that.setData({
         contentHeight: temp
       });
