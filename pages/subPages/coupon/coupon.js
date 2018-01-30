@@ -1,11 +1,33 @@
-// pages/cart/cart.js
+// pages/subPages/coupon/coupon.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    curNav: 0,
+    navData: [
+      {
+        title: "未使用",
+        initData: {
+          imgSrc: "../../images/common/coupon.png",
+          backgroundColor: "#d4d4d4",
+          title: "您没有 未使用 的优惠券",
+          btnTitle: "到小米商城逛逛",
+          isShowBtn: false
+        },
+      },
+      {
+        title: "已使用/已过期",
+        initData: {
+          imgSrc: "../../images/common/coupon.png",
+          backgroundColor: "#d4d4d4",
+          title: "您没有 已使用/已过期 的优惠券",
+          btnTitle: "到小米商城逛逛",
+          isShowBtn: false
+        },
+      }
+    ]
   },
 
   /**
@@ -62,6 +84,13 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  /**
+   * 改变菜单
+   */
+  _changeNav: function ( e ) {
+    this.setData({
+      curNav: e.currentTarget.dataset.num
+    });
   }
-  
 })

@@ -1,11 +1,17 @@
-// pages/cart/cart.js
+// pages/subPages/fcode/fcode.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    initData: {
+      imgSrc: "../../images/common/exclamation.png",
+      backgroundColor: "red",
+      title: "暂无可用F码",
+      btnTitle: "到小米商城逛逛",
+      isShowBtn: true
+    }
   },
 
   /**
@@ -63,5 +69,4 @@ Page({
   onShareAppMessage: function () {
   
   }
-  
 })

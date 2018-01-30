@@ -1,0 +1,5 @@
+<!--pages/subPages/fcode/fcode.wxml-->
+<view class='container'>
+  <blank-box inner-data="{{ initData }}"></blank-box>
+</view>
+

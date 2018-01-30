@@ -1,0 +1,14 @@
+<!--pages/subPages/coupon/coupon.wxml-->
+<view class='container'>
+  <view class='coupon-nav-list'>
+    <view data-num="{{ index }}" class='nav-item' wx:for="{{ navData }}" wx:for-index="index" wx:for-item="item" wx:key="{{ index }}" bindtap='_changeNav'>
+      <text class="nav-item-title {{curNav==index?'cur':''}}">{{ item.title }}</text>
+    </view>
+  </view>
+  <view class='coupon-container'>
+    <blank-box inner-data="{{ navData[ curNav ].initData }}"></blank-box>
+  </view>
+  
+</view>
+
+

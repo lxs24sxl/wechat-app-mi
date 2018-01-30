@@ -1,0 +1,5 @@
+<!--pages/subPages/order/order.wxml-->
+<view class='container'>
+  <blank-box inner-data="{{ initData }}"></blank-box>
+</view>
+

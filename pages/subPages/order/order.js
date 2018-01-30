@@ -1,11 +1,17 @@
-// pages/cart/cart.js
+// pages/subPages/order/order.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    initData: {
+      imgSrc: "../../images/common/order.png",
+      backgroundColor: "#d4d4d4",
+      title: "还没有在小程序下过单",
+      btnTitle: "到小米商城逛逛",
+      isShowBtn: true
+    }
   },
 
   /**
@@ -63,5 +69,4 @@ Page({
   onShareAppMessage: function () {
   
   }
-  
 })

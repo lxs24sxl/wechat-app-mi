@@ -1,0 +1,11 @@
+<!--components/blankBox/blankBox.wxml-->
+  <view class='no-product-box'>
+    <!--提示图片区  -->
+    <view style='background-color: {{ innerData.backgroundColor }}' class='logo-cart-wrapper'>
+      <image lazy-load='{{ true }}' class='logo-cart' src='{{ innerData.imgSrc }}'></image>
+    </view>
+    <!--提示文字  -->
+    <text class='title'>{{ innerData.title }}</text>
+    <!--按钮  -->
+    <button wx:if="{{ innerData.isShowBtn }}" class='btn-cart' hover-class="btn-cart-hover" bindtap='toIndex'>{{ innerData.btnTitle }}</button>
+  </view>

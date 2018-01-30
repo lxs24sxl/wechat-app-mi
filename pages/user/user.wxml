@@ -7,11 +7,11 @@
     </view>
     <view class='userInfo-message'>
       <text class='userInfo-name'>{{ userInfo.nickName }}</text>
-      <text class='userInfo-uid'>小米账号:918473906</text>
+      <text class='userInfo-uid'>小米账号:{{ micode }}</text>
     </view>
 
     <view class='userInfo-qrcode-wrap'>
-      <image src="../../images/common/qrcode.png" class='userInfo-qrcode'></image>
+      <image src="{{ qrcodeSrc }}" class='userInfo-qrcode'></image>
     </view>
   </view>
   <!--我的相关功能  -->

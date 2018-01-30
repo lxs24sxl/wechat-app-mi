@@ -1,5 +1,5 @@
 <!--components/cellBox/cellBox.wxml-->
-<view class='cell-box-outer' hover-class="cell-enter">
+<view data-name="{{ innerData.name }}" class='cell-box-outer' hover-class="cell-enter" bindtap='_changeTo'>
   <view class='cell-box-inner'>
 
     <view class='cell-img-wrap'>

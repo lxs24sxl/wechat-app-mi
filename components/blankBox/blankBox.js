@@ -1,4 +1,4 @@
-// components/cellBox/cellBox.js
+// components/blankBox/blankBox.js
 Component({
   /**
    * 组件的属性列表
@@ -7,9 +7,11 @@ Component({
     innerData: {
       type: Object,
       value: {
-        name: "order",
-        title: "我的订单",
-        imgSrc: "../../images/mine/icon_order.png"
+        imgSrc: "../../images/cart/cc-cart.png",
+        backgroundColor: "#d4d4d4",
+        title: "购物车还是空的",
+        btnTitle: "到小米商城逛逛",
+        isShowBtn: true
       },
       observer: function ( newVal, oldVal ) {
         this.setData({
@@ -30,11 +32,13 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    _changeTo: function ( e ) {
-      var name = e.currentTarget.dataset.name;
-      wx.navigateTo({
-        url: '/pages/subPages/'+ name +'/' + name
-      })
-    }
+  /**
+    * 返回首页
+    */
+  toIndex: function () {
+    wx.switchTab({
+      url: '/pages/index/index'
+    });
+  }
   }
 })

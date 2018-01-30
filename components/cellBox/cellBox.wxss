@@ -4,6 +4,10 @@
   width: 90vw;
   padding:0 5vw;
   background-color: white;
+  transition: background-color .2s linear;
+}
+.cell-enter {
+  background-color: #fcfcfc;
 }
 .cell-box-inner {
   height: inherit;
@@ -31,8 +35,4 @@
 }
 .cell-title {
   font-size: 32rpx;
-}
-.cell-enter {
-  background-color: #fcfcfc;
-  color: #ff6700;
 }

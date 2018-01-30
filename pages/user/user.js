@@ -40,7 +40,9 @@ Page({
         ]
       }
     },
-    userInfo: null
+    userInfo: null,
+    qrcodeSrc: "../../images/common/qrcode.png",
+    micode: 918473906
   },
 
   /**

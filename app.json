@@ -5,7 +5,11 @@
     "pages/user/user",
     "pages/cart/cart",
     "pages/category/category",
-    "pages/subPages/search/search"
+    "pages/subPages/search/search",
+    "pages/subPages/order/order",
+    "pages/subPages/coupon/coupon",
+    "pages/subPages/fcode/fcode",
+    "pages/subPages/setting/setting"
   ],
   "window": {
     "backgroundTextStyle": "light",

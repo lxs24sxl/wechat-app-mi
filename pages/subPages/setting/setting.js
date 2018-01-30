@@ -1,4 +1,4 @@
-// pages/cart/cart.js
+// pages/subPages/setting/setting.js
 Page({
 
   /**
@@ -63,5 +63,4 @@ Page({
   onShareAppMessage: function () {
   
   }
-  
 })
