@@ -459,6 +459,30 @@ Page({
     isLazyLoad: true
   },
   onLoad: function () {
+    // 获得网络状态
+    new Promise((resolve, reject) => {
+      let req = wx.getNetworkType({
+        success: function (res) {
+          // 返回网络类型, 有效值：
+          // wifi/2g/3g/4g/unknown(Android下不常见的网络类型)/none(无网络)
+          var networkType = res.networkType
+          if (networkType == "none") {
+            resolve(false);
+          } else {
+            resolve(true);
+          }
+        },
+        fail: function (res) {
+          reject(false);
+        }
+      })
+    }).then(function (res) {
+      if (!res) {
+        wx.reLaunch({
+          url: '/pages/error/error',
+        })
+      }
+    });
   },
   /**
    * 上拉加载

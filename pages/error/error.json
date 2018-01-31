@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "blank-box": "../../components/blankBox/blankBox"
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#f9f9f9",
+  "navigationBarTitleText": "小米商城Lite",
+  "navigationBarTextStyle": "black",
+  "backgroundColor": "#ebebeb"
+}

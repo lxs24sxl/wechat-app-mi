@@ -40,6 +40,20 @@ App({
       }
     })
     
+    
+    // 获取网络改变状态
+    wx.onNetworkStatusChange(function (res) {
+      if(res.networkType == "none") {
+        wx.reLaunch({
+          url: '/pages/error/error',
+        })
+      } else {
+        wx.reLaunch({
+          url: '/pages/index/index',
+        })
+      }
+    })
+
     // 请求数据,获得返回数据存放在全局变量中
     // wx.request({
     //   url: 'test.action', //仅为示例，并非真实的接口地址

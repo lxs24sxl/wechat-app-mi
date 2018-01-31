@@ -14,7 +14,9 @@ Page({
           backgroundColor: "#d4d4d4",
           title: "您没有 未使用 的优惠券",
           btnTitle: "到小米商城逛逛",
-          isShowBtn: false
+          isShowBtn: false,
+          isSmallImg: true,
+          isSmallBtn: true,
         },
       },
       {
@@ -24,7 +26,9 @@ Page({
           backgroundColor: "#d4d4d4",
           title: "您没有 已使用/已过期 的优惠券",
           btnTitle: "到小米商城逛逛",
-          isShowBtn: false
+          isShowBtn: false,
+          isSmallImg: true,
+          isSmallBtn: true,
         },
       }
     ]

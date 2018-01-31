@@ -11,7 +11,9 @@ Component({
         backgroundColor: "#d4d4d4",
         title: "购物车还是空的",
         btnTitle: "到小米商城逛逛",
-        isShowBtn: true
+        isShowBtn: true,
+        isSmallImg: true,
+        isSmallBtn: true,
       },
       observer: function ( newVal, oldVal ) {
         this.setData({

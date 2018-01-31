@@ -1,4 +1,4 @@
-// pages/subPages/order/order.js
+// pages/error/error.js
 Page({
 
   /**
@@ -6,13 +6,14 @@ Page({
    */
   data: {
     initData: {
-      imgSrc: "../../images/common/order.png",
-      backgroundColor: "#d4d4d4",
-      title: "还没有在小程序下过单",
-      btnTitle: "到小米商城逛逛",
-      isShowBtn: true,
-      isSmallImg: true,
-      isSmallBtn: true,
+      imgSrc: "../../images/common/error-network.png",
+      backgroundColor: "#ebebeb",
+      title: "网络无法连接",
+      btnTitle: "返回首页",
+      isSmallImg: false,
+      isGray: true,
+      isSmallBtn: false,
+      isShowBtn: true
     }
   },
 

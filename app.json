@@ -10,7 +10,8 @@
     "pages/subPages/coupon/coupon",
     "pages/subPages/fcode/fcode",
     "pages/subPages/setting/setting",
-    "pages/subPages/detail/detail"
+    "pages/subPages/detail/detail",
+    "pages/error/error"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -10,7 +10,9 @@ Page({
       backgroundColor: "red",
       title: "暂无可用F码",
       btnTitle: "到小米商城逛逛",
-      isShowBtn: true
+      isShowBtn: true,
+      isSmallImg: true,
+      isSmallBtn: true,
     }
   },
 
