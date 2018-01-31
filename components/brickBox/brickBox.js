@@ -161,6 +161,36 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    
+    _changeToDetail: function ( e ) {
+      var uid = e.currentTarget.dataset.uid;
+      wx.showToast({
+        title: "正在请求数据",
+        mask: true,
+        icon: "loading",
+        duration: 800
+      })
+      setTimeout(function () {
+        if (uid == 1010101 || uid == 1010102) {
+          wx.navigateTo({
+            url: '/pages/subPages/detail/detail?uid=' + uid,
+          })
+        } else {
+          wx.showModal({
+            content: '由于没有后台数据，所以该页面没有制作，点击确认跳转到小米5X详细页面',
+            success: function (res) {
+              if (res.confirm) {
+                wx.navigateTo({
+                  url: '/pages/subPages/detail/detail?uid=1010101',
+                })
+              } else if (res.cancel) {
+                console.log('用户点击取消')
+              }
+            }
+          })
+        }
+      }, 800);
+      
+      
+    }
   }
 })

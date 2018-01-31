@@ -17,6 +17,7 @@ Page({
           child: [
             [
               {
+                id: 1010101,
                 index: 1,
                 title: '小米5X 变焦双摄',
                 desc: '5.5"大屏轻薄全金属',
@@ -26,6 +27,7 @@ Page({
                 imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/star/mi_5x.png'
               },
               {
+                id: 1010102,
                 index: 2,
                 title: '红米5',
                 desc: '千元全面屏,前置柔光自拍',
@@ -37,6 +39,7 @@ Page({
             ],
             [
               {
+                id: 1010103,
                 index: 3,
                 title: '小米移动电源高配版',
                 desc: '轻薄设计,轻松出行',
@@ -46,6 +49,7 @@ Page({
                 imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/star/mi_powerpro.png'
               },
               {
+                id: 1010104,
                 index: 4,
                 title: '小米电视4A 65"',
                 desc: '4K超清大屏,64位处理器',
@@ -57,6 +61,7 @@ Page({
             ],
             [
               {
+                id: 1010105,
                 index: 5,
                 title: '小米电视4A 49英寸"',
                 desc: '全高清,HDR,64位处理器',
@@ -66,6 +71,7 @@ Page({
                 imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/star/mi_tv_4a49.png'
               },
               {
+                id: 1010106,
                 index: 6,
                 title: '小米空气净化器 2"',
                 desc: '10分钟,房间空气焕然一新',
@@ -89,6 +95,7 @@ Page({
         child: [
           [
             {
+              id: 1010201,
               index: 1,
               title: '小米降噪耳机',
               desc: '双动圈+动铁声学架构',
@@ -98,6 +105,7 @@ Page({
               imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/news/mi_earphone3-5.png'
             },
             {
+              id: 1010202,
               index: 2,
               title: '小米笔记本Air 12.5',
               desc: '像杂志一般轻薄',
@@ -109,6 +117,7 @@ Page({
           ],
           [
             {
+              id: 1010203,
               index: 3,
               title: '米家思维四控插线板',
               desc: '四位分控,随用随开',
@@ -118,6 +127,7 @@ Page({
               imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/news/mi_powerstrip-4k4.png'
             },
             {
+              id: 1010204,
               index: 4,
               title: '霍尼韦尔新风口罩米家定制',
               desc: '高效防护,佩戴舒适',
@@ -129,6 +139,7 @@ Page({
           ],
           [
             {
+              id: 1010205,
               index: 5,
               title: 'USB3.0至千兆网口多功能转接器',
               desc: '以一敌四,高效办公好搭档',
@@ -138,6 +149,7 @@ Page({
               imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/news/mi_usb3.0zjk.png'
             },
             {
+              id: 1010206,
               index: 6,
               title: '70迈只能后视镜',
               desc: '大屏大视野，看得更清晰',
@@ -168,6 +180,7 @@ Page({
         child: [
           [
             {
+              id: 1010501,
               index: 1,
               title: '小米MIX 2 全面屏2.0',
               desc: '5.99"大屏,4轴光学防抖',
@@ -177,6 +190,7 @@ Page({
               imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/phone/mi_mix2.png'
             },
             {
+              id: 1010502,
               index: 2,
               title: '小米Note 3 人脸解锁',
               desc: '1600万美颜自拍',
@@ -199,6 +213,7 @@ Page({
         child: [
           [
             {
+              id: 1010601,
               index: 1,
               title: '小米电视4C 55英寸',
               desc: '4K HDR 人工智能系统',
@@ -208,6 +223,7 @@ Page({
               imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/tv/mi_tv_4c55.png'
             },
             {
+              id: 1010602,
               index: 2,
               title: '小米电视4A 49英寸',
               desc: '全高清,HDR,64位处理器',
@@ -219,6 +235,7 @@ Page({
           ],
           [
             {
+              id: 1010603,
               index: 3,
               title: '小米电视4 55英寸',
               desc: '无边框式沉浸设计',
@@ -228,6 +245,7 @@ Page({
               imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/tv/mi_tv4_55.png'
             },
             {
+              id: 1010604,
               index: 4,
               title: '小米电视4A 55英寸',
               desc: '4K HDR,64位处理器',
@@ -250,6 +268,7 @@ Page({
         child: [
           [
             {
+              id: 1010701,
               index: 1,
               title: '米家扫地机器人',
               desc: '智商高,扫的干净扫得快',
@@ -259,6 +278,7 @@ Page({
               imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/smart/mi_roomrobot.png'
             },
             {
+              id: 1010702,
               index: 2,
               title: '米家空气净化器Pro',
               desc: '大空间,快循环',
@@ -270,6 +290,7 @@ Page({
           ],
           [
             {
+              id: 1010703,
               index: 3,
               title: '小米路由器 3C',
               desc: '一款更轻快的好路由',
@@ -279,6 +300,7 @@ Page({
               imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/smart/mi_router3C.png'
             },
             {
+              id: 1010704,
               index: 4,
               title: '小米WiFi电力猫',
               desc: '有插座的地方 就有WiFi',
@@ -290,6 +312,7 @@ Page({
           ],
           [
             {
+              id: 1010705,
               index: 5,
               title: '米家飞利浦智睿吸顶灯',
               desc: '色温颜色可调',
@@ -299,6 +322,7 @@ Page({
               imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/smart/mi_philips_ceilinglamp.png'
             },
             {
+              id: 1010706,
               index: 6,
               title: '小米手环 2',
               desc: 'OLED 显示屏, 触摸操作',
@@ -310,6 +334,7 @@ Page({
           ],
           [
             {
+              id: 1010707,
               index: 7,
               title: '米家小白智能摄像机',
               desc: '360° 全景拍摄,红外夜视',
@@ -319,6 +344,7 @@ Page({
               imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/smart/mi_smartcamera-v.png'
             },
             {
+              id: 1010708,
               index: 8,
               title: '米家行车记录仪',
               desc: '晚上也可以拍清车牌',
@@ -330,6 +356,7 @@ Page({
           ],
           [
             {
+              id: 1010709,
               index: 9,
               title: '90分旅行箱 20寸',
               desc: '静态轮胎,内饰纺织布料',
@@ -339,6 +366,7 @@ Page({
               imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/smart/mi_90trunk_20.png'
             },
             {
+              id: 1010710,
               index: 10,
               title: '米家 LED 智能台灯',
               desc: '照明之上,光的艺术品',
@@ -361,6 +389,7 @@ Page({
         child: [
           [
             {
+              id: 1010801,
               index: 1,
               title: '12.5"笔记本Air 128GB',
               desc: '超薄长续航',
@@ -370,6 +399,7 @@ Page({
               imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/computer/mi_mibookair-12.png'
             },
             {
+              id: 1010802,
               index: 2,
               title: '15.6"笔记本i7 8GB',
               desc: '全新高性能独显',
@@ -381,6 +411,7 @@ Page({
           ],
           [
             {
+              id: 1010803,
               index: 3,
               title: '13.3"笔记本i7 独显',
               desc: '轻薄全金属,超长续航',
@@ -390,6 +421,7 @@ Page({
               imgSrc: 'http://github.com/lxs24sxl/readme_add_pic/raw/master/wx_mi_images/index/computer/mi_mibookair.png'
             },
             {
+              id: 1010804,
               index: 4,
               title: '15.6"笔记本i5 8GB',
               desc: '更强悍的专业笔记本',

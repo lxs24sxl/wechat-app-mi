@@ -12,7 +12,7 @@
     <!--两行列表  -->
     <view class='brick-list-two' wx:key="listIndex" wx:for="{{ data.child }}" wx:for-item="listItem" wx:for-index="listIndex">
       <!--列表项  -->
-      <view class='brick-item' wx:key="index" wx:for="{{ listItem }}" wx:for-index="index" wx:for-item="item">
+      <view data-uid="{{ item.id }}" class='brick-item' wx:key="index" wx:for="{{ listItem }}" wx:for-index="index" wx:for-item="item" bindtap='_changeToDetail'>
         <!--商品图片盒子  -->
         <view class='item-image-wrapper'>
           <image lazy-load="{{isLazyLoad}}" class='item-image' src='{{ item.imgSrc }}'></image>

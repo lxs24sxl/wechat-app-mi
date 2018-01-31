@@ -25,12 +25,12 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 0,
 			"list": [
 				{
 					"id": 0,
 					"name": "我的页面",
-					"pathName": "pages/user/user",
+					"pathName": "pages/subPages/detail/detail",
 					"query": "",
 					"scene": "1005"
 				}

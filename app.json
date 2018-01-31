@@ -9,7 +9,8 @@
     "pages/subPages/order/order",
     "pages/subPages/coupon/coupon",
     "pages/subPages/fcode/fcode",
-    "pages/subPages/setting/setting"
+    "pages/subPages/setting/setting",
+    "pages/subPages/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

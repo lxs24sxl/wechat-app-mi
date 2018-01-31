@@ -1,0 +1,18 @@
+<!--pages/subPages/detail/detail.wxml-->
+<view class='container'>
+  <swiper class='swiper-wrapper' indicator-dots="true" indicator-color="rgba(0, 0, 0, .1)" indicator-active-color="#fff">
+    <block wx:for="{{ detailData.swiperImgurls }}" wx:key="*this">
+      <swiper-item class="swiper-silde">
+        <image class="swiper-image" src='{{ item }}'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view  class='overview'>
+    <text class='goods-name'>{{ detailData.name }}</text>
+    <text class='goods-desc'>{{ detailData.desc }}</text>
+    <view class='goods-price-wrap'>
+      <text class='goods-price'>{{ detailData.price }}</text>
+    </view>
+    
+  </view>
+</view>
