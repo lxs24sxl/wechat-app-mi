@@ -1,0 +1,29 @@
+<!--components/commentBox/commentBox.wxml-->
+<view class='comment-box'>
+  <view class='avatar-img-box comment-left'>
+    <image class='avatar-img' src='{{innerData.user_avatar}}'></image>
+  </view>
+  <view class='comment-right'>
+    <view class='comment-content-outer'>
+    
+      <view class='user-info'>
+        <text class='name text'>{{ innerData.user_name }}</text>
+      </view>
+      <view class='comment-content-inner'>
+        <text class='text'>{{ innerData.comment_content }}</text>
+        <view class='photoes'>
+          <image class='photo' wx:for="{{ innerData.comment_images }}" wx:key="index" src="{{ item }}"></image>
+        </view>
+      </view>
+      <view class='user-info'>
+        <text class='data text'>{{ innerData.add_time }}</text>
+      </view>
+    </view>
+    <view class='comment-reply'>
+      <view class='comment-reply-item official'>
+        <text class='text'>官方回复:</text>{{ innerData.reply_content }}
+      </view>
+      <view class='comment-reply-item' wx:key="index" wx:for="{{ innerData.user_replys }}"></view>
+    </view>
+  </view>
+</view>

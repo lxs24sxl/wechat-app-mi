@@ -1,7 +1,11 @@
 /* pages/subPages/detail/detail.wxss */
+.container {
+  background-color: #ebebeb;
+}
 .swiper-wrapper {
   width: 100%;
   height: 820rpx;
+  
 }
 .swiper-silde {
   width: inherit;
@@ -21,6 +25,7 @@
   display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
+   margin-bottom: 16rpx;
 }
 .goods-name {
   font-size: 32rpx;
@@ -47,4 +52,85 @@
   right: -42rpx;
   top: 50%;
   transform: translateY(-50%);
+}
+.product-box {
+  margin-bottom: 16rpx;
+}
+/*留言区  */
+.comment-view {
+  text-align: left;
+  background-color: #fff;
+}
+.comment-info {
+  margin: 0 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 2rpx solid #f3f3f3;
+}
+.box-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.box-flex view, .box-flex text {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.comment-count {
+  font-size: 30rpx;
+}
+.comment-degree {
+  text-align: right;
+  font-size: 26rpx;
+  color: #a4a4a4;
+}
+.comment-reply {
+  margin-bottom: 16rpx;
+}
+
+/*描述区  */
+.description-view {
+  width: 100%;
+}
+.tab-header {
+  height: 90rpx;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  line-height: 90rpx;
+}
+.tab-item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+.cur {
+  color: #ff6700;
+  border-bottom: 6rpx solid #ff6700;
+}
+.tab-item .flex {
+  font-size: 30rpx;
+}
+.tab-view {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.tab-view-item {
+  width: 100%;
+}
+.tab-img {
+  width: inherit;
+  height: inherit;
 }

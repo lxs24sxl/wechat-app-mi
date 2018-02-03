@@ -1,0 +1,47 @@
+/* components/promotions/promotions.wxss */
+.promotions-section{
+  width: 100%;
+  height: 106rpx;
+  background-color: #fff;
+}
+.section-inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: inherit;
+  line-height: 106rpx;
+  border-bottom: 4rpx solid #f3f3f3;
+  width: 92vw;
+  margin: 0 4vw;
+}
+.promotions-title-wrap {
+  margin-right: 40rpx;
+  font-size: 28rpx;
+}
+.promotions-title {
+  color: #8c8c8c;
+}
+.promotions-type-wrap {
+  margin-right: 10rpx;
+  font-size: 28rpx;
+}
+.promotions-type {
+  color: #ff6700;
+  padding: 4rpx 10rpx; 
+  border: 4rpx solid #ff6700;
+  border-radius: 8rpx;
+}
+.promotions-flex {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  flex: 1 0 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 30rpx;
+}
+.promotions-desc {
+  color: #202020;
+}

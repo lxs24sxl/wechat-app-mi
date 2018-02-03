@@ -1,0 +1,16 @@
+<!--components/promotions/promotions.wxml-->
+<view class='promotions-section'>
+  <view class='content-container section-inner'>
+
+    <view class='promotions-title-wrap'>
+       <text class='promotions-title'>{{ innerData.title  }}</text>
+    </view>  
+    <view class='promotions-type-wrap'>
+      <text class='promotions-type'>{{ innerData.typeTitle }}</text>
+    </view>
+    <view class='promotions-flex'>
+      <text class='promotions-desc'>{{ innerData.desc }}</text>
+    </view> 
+
+  </view>
+</view>

@@ -1,0 +1,11 @@
+<!--components/productSection/productSection.wxml-->
+<view class='product-section'>
+  <view class='section-inner'>
+    <view class='product-title-wrap'>
+      <text class='product-title'>{{ innerData.title }}</text>
+    </view>
+    <view class='product-flex more'>
+       <text class='promotions-desc'>{{ innerData.desc }} x {{ innerData.num }}</text>
+    </view>
+  </view>
+</view>

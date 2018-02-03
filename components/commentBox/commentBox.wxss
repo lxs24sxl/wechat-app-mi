@@ -1,0 +1,79 @@
+/* components/commentBox/commentBox.wxss */
+.comment-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  margin: 20rpx 30rpx;
+}
+.comment-left {
+  width: 90rpx;
+  margin-right: 16rpx;
+}
+.avatar-img-box {
+  width: 90rpx;
+}
+.avatar-img {
+  width: inherit;
+  height: 90rpx;
+  border-radius: 50%;
+}
+.comment-right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.comment-content-outer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.user-info {
+  height: 40rpx;
+  margin-bottom: 12rpx;
+}
+
+.text {
+  font-size: 28rpx;
+}
+.comment-content-inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.photoes {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  width: 600rpx;
+  flex-wrap: wrap;
+  margin-bottom: 12rpx;
+}
+.photoes .photo {
+  width: 160rpx;
+  height: 160rpx;
+  margin-top: 24rpx;
+  margin-left: 24rpx;
+}
+.photoes .photo:nth-child(3n + 1) {
+  margin-left: 0;
+}
+
+/*回复区 */
+
+.comment-reply {
+  width: 580rpx;
+  background-color: #f6f6f6;
+  padding: 10rpx 14rpx;
+}
+.comment-reply-item {
+  line-height: 40rpx;
+  font-size: 26rpx;
+}
+.official .text {
+  color: #ff6700;
+}

@@ -1,4 +1,9 @@
 {
+  "usingComponents": {
+    "promotions-box": "../../../components/promotions/promotions",
+    "product-section": "../../../components/productSection/productSection",
+    "comment-box": "../../../components/commentBox/commentBox"
+  },
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#f9f9f9",
   "navigationBarTitleText": "商品详情",
