@@ -96,8 +96,11 @@ Page({
    * 导航跳转
    */
   _changeTab: function ( e ) {
+    // 导航当前下标
     var num = e.currentTarget.dataset.num;
+    // 当前导航下的数据
     var tabContentData = this.data.detailData.view_content.descTabsView.descTabsView[ num ].tabContent;
+    // 设置变量
     this.setData({
       curNum: num,
       tabContent: tabContentData  

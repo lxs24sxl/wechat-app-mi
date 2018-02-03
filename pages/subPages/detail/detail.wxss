@@ -134,3 +134,49 @@
   width: inherit;
   height: inherit;
 }
+/*底部区域  */
+.fixed-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 100rpx;
+  width: 100%;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.btn-cart {
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-cart-img {
+  width: 50rpx;
+  height: 50rpx;
+}
+.btn-buy {
+  height: 100rpx;
+  width: 330rpx;
+  background-color: #ff6700;
+  text-align: center;
+  line-height: 100rpx;
+}
+.btn-buy-now {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  flex: 1 0 auto;
+  height: 100rpx;
+  background-color: #ea5f39;
+  text-align: center;
+  line-height: 100rpx;
+}
+.footer-text {
+  color: #fff;
+  font-size: 34rpx;
+}

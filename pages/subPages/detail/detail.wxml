@@ -41,17 +41,30 @@
 
   <!--详情数据  -->
    <view class='description-view'>
-
+    <!--导航栏  -->
     <view class='tab-header'>
       <view data-num="{{ index }}" class='tab-item' wx:for="{{ detailData.view_content.descTabsView.descTabsView }}" wx:key="{{ item.name }}" bindtap='_changeTab'>
         <text class='flex {{ curNum==index?"cur":""}}'>{{ item.name }}</text>
       </view>
     </view>
+    <!--导航内容  -->
     <view class='tab-view'>
       <view class='tab-view-item' wx:for="{{ tabContent }}" wx:key="index" >
         <image class='tab-img' mode="widthFix" src='{{ item.plainView.img}}'></image>
       </view>
     </view>
     
+   </view>
+   
+   <view class='fixed-footer'>
+      <view class='btn-cart'>
+        <image class='btn-cart-img' src='../../../images/cart/cc-cart-gray.png'></image>
+      </view>
+      <view class='btn-buy'>
+        <text class='footer-text'>加入购物车</text>
+      </view>
+      <view class='btn-buy-now'>
+        <text class='footer-text'>立即购买</text>
+      </view>
    </view>
 </view>
